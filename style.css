@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+body{
+    background-color: #f3afea; /* Color de fondo */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+h1{
+    color: #5aecf7; /* Color del texto */
+    font-size: 9rem; /* Tamaño de la fuente */
+    background-color: #e5aff3; /* Color de fondo */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*h2{
+    color: #f17611; /* Color del texto 
+    font-size: 6rem; /* Tamaño de la fuente 
+    background-color: #350fdd; /* Color de fondo 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-style: oblique;
+}*/
+
+h3,h2,h4,h5,h6{
+    color: #800202; /* Color del texto */
+    font-size: 4rem; /* Tamaño de la fuente */
+    background-color: #f59393; /* Color de fondo */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+/*h4{
+    color: #b731f5; /* Color del texto 
+    font-size: 3rem; /* Tamaño de la fuente 
+    background-color: #f32db8; /* Color de fondo 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: line-through;
+}
+h5{
+    color: #f5e731; /* Color del texto 
+    font-size: 2rem; /* Tamaño de la fuente 
+    background-color: #855c05; /* Color de fondo 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: overline;
+}
+
+h6{
+    color: #1e8888; /* Color del texto 
+    font-size: 1rem; /* Tamaño de la fuente 
+    background-color: #2df3e5; /* Color de fondo 
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}*/
+.fondoverde{
+    background-color: #024d02; /* Color de fondo */
+    margin-top:3rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+}
+
+.fondonaranja{
+    background-color: #ffa600; /* Color de fondo */
+    margin-top:3rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+}
