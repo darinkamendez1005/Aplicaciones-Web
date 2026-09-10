@@ -1,17 +1,19 @@
 body{
     margin: 15px;
-    background-color: #807d7d;
+    background-color: #f8f6ed;
 }
-.imagprin{
-    align-items: flex-start;
-    width: 35%;
+.encabezado{
+    justify-content:space-between;
+    flex-direction: row;
 }
 h1{
     font-size: 2rem;
     color: #6e1c5a;
-
 }
-h2{
-    font-size: 1.2rem;
-    color: #0e0d0d;
+.bienvenida{
+    align-items: baseline;
+}
+.imagprin{
+    width: 35%;
+    order: -1;
 }
