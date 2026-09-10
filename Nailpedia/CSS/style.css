@@ -1,19 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+
+
 body{
-    margin: 15px;
+    margin: 0;
     background-color: #f8f6ed;
 }
 .encabezado{
+    margin: 0;
+    display: flex; 
     justify-content:space-between;
     flex-direction: row;
-}
-h1{
-    font-size: 2rem;
-    color: #6e1c5a;
+    background-color: #a0a0a0;
+    order: -1;
 }
 .bienvenida{
-    align-items: baseline;
+    justify-content: flex-start;
+    background-color: #e8aeb7;
 }
 .imagprin{
     width: 35%;
-    order: -1;
+    flex-direction: row-reverse;
+    order: 1;
+}
+h3{
+    color: #d36b8a;
+    font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
