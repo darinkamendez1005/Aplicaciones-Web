@@ -1,0 +1,17 @@
+body{
+    margin: 15px;
+    background-color: #807d7d;
+}
+.imagprin{
+    align-items: flex-start;
+    width: 35%;
+}
+h1{
+    font-size: 2rem;
+    color: #6e1c5a;
+
+}
+h2{
+    font-size: 1.2rem;
+    color: #0e0d0d;
+}
