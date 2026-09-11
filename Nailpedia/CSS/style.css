@@ -61,3 +61,18 @@ ul li a{
   margin-left: 20px; /* margen izquierdo */
   justify-content: space-around;
 }
+.galeriaDestacada {
+  text-align: center;
+  padding: 40px;
+}
+.galeriaDestacada .imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.galeriaDestacada img {
+  width: 150px; /*sirve para establecer el ancho de la imagen*/
+  height: 150px; /*sirve para establecer la altura de la imagen*/
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

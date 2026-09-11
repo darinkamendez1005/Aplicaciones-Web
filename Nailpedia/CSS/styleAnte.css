@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap');
+
+body {
+  font-family: "Libertinus Serif Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.parte1 {
+  background-color: #a0a0a0;
+  padding: 20px;
+  text-align: center;
+}
+
+.parte2 {
+  background-color: #e8aeb7;
+  padding: 20px;
+  text-align: center;
+}
+
+.parte3 {
+  background-color: #a0a0a0;
+  padding: 20px;
+  text-align: center;
+}
+
+.parte4 {
+  background-color: #e8aeb7;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+h4 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+iframe {
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+}
