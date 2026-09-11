@@ -16,7 +16,7 @@ body{
     order: -1;
 }
 .bienvenida{
-    justify-content: flex-start;
+    justify-content: center;
     background-color: #e8aeb7;
 }
 .imagprin{
