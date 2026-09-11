@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Smooch+Sans:wght@100..900&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap');
 
 body{
     margin: 0;
@@ -10,23 +10,54 @@ body{
 .encabezado{
     margin: 0;
     display: flex; 
-    justify-content:space-between;
+    align-items: center;
+    justify-content:space-around;
     flex-direction: row;
     background-color: #a0a0a0;
     order: -1;
+
 }
-.bienvenida{
-    justify-content: center;
-    background-color: #e8aeb7;
+.bienvenida {
+  display: flex;              
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #e8aeb7;
+  padding: 50px;
+  font-family: "Libertinus Serif Display", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
-.imagprin{
-    width: 35%;
-    flex-direction: row-reverse;
-    order: 1;
+.bienvenida .texto {
+  flex: 1;
+  max-width: 50%;
 }
-h3{
-    color: #d36b8a;
+h1{
+    color: #f34c7e;
+
     font-family: "Lobster Two", sans-serif;
   font-weight: 400;
   font-style: normal;
+
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    justify-content: between;
+    align-items: center;
+    
+}
+.bienvenida .imagen img {
+  width: 18rem; /* ancho de la imagen */
+  height: 18rem; /*altura de la imagen*/
+  border-radius: 10px; /*borde de imagen */
+  margin-left: 20px; /* margen izquierdo */
+  justify-content: space-around;
 }
