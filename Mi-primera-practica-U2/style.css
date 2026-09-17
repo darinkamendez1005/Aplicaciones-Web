@@ -1,0 +1,82 @@
+.padre{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hijo{
+    width: 40%;
+    background-color: #83073b;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 0%;
+    border: 12px dotted #5f0505;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    margin-bottom: 2rem;
+}
+.tagmenu{
+    color: #0a0f77;
+    font-size: 1.5rem;
+}
+.tagmenu:hover{
+    color:aqua;
+    cursor: pointer;
+    text-decoration: wavy;
+}
+header img{
+    height: 100px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.hijo img{
+    height: 9rem;
+}
+.hijo h2:first-child{
+    color: #03490c;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.hijo h2:nth-child(2){
+    color:chocolate;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+.hijo:hover{
+    background-color: #0d7765;
+    border-color: #0a0f77;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 3ch;
+    cursor:progress;
+}
+.hijo:hover h2:first-child{
+    color: #000;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.hijo:hover p{
+    color:#ec5f77;
+    font-size: 1.5rem;
+}
+.btnmagia:hover .divcambio{
+    background-color: #ec5f77;
+}
+.btnmagia:hover p{
+    color:#83073b;
+}
+.btnmagia:hover a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#5f0505;
+    cursor: help;
+}
