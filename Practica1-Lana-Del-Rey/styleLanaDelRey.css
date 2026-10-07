@@ -1,0 +1,93 @@
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+:root {/*Born to die*/
+  --color-fondo: #FFFDD0;       /* Crema */
+  --color-texto: #1A2530;       /* Marino Oscuro */
+  --color-principal: #B22222;   /* Rojo */
+  --color-secundario: #4682B4;  /* Azul Cielo */
+}
+.DHM_divInicial.eraOscura { /*Ultraviolence*/
+  --color-fondo: #1C1C1C;       /* Negro Pizarra */
+  --color-texto: #F5F5F5;       /* Blanco Hueso */
+  --color-principal: #D4AF37;   /* Dorado Viejo */
+  --color-secundario: #2F4F4F;     /* Gris Humo */
+}
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Georgia', serif;
+}
+.DHM_divInicial{
+    justify-content:space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 2rem 0rem 4rem 0rem;
+}
+.Album{
+    height: 10rem;
+    width: 16%;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-secundario);
+}
+.btn{
+    padding: 2rem 3rem;
+    font-size: 2rem;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    transition: background-color 0.5s ease-in-out;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border-radius: 10px;
+    border: 1px solid var(--color-texto);
+}
+header{
+    padding: 1rem;
+    text-align: center;
+}
+.DHM_bienvenida{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+@media screen and (max-width:1024px){
+    .DHM_Album{
+        width: 45%;
+    }
+}
+@media screen and (max-width:768px){
+    .DHM_Album{
+        width: 75%;
+    }
+
+    .DHM_divInicial{
+        justify-content: center;
+    }   
+}
+@media screen and (max-width:480px){
+    .DHM_Album{
+        width: 90%;
+    }
+
+    h1{
+        font-size: 1.7rem;
+    }
+
+    p, .btn{
+        font-size: 1rem;
+    }
+}
