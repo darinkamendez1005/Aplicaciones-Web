@@ -1,0 +1,181 @@
+/*
+.space-grotesk-family {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dm-sans-family {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+:root {
+    --rojo: #a9502c;
+    --titulos: #29241f;
+    --cuerpo: #eee9df;
+    --bordesYdescripcion: #776f66;
+    --perritos: #f3efe6;
+    --perritos-hover: #faf7f2;
+}
+
+body {
+    background-color: var(--cuerpo);
+    font-family: "DM Sans", sans-serif; 
+    color: var(--titulos);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 4rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;          
+    gap: 20rem;                     
+}
+
+header > div {
+    max-width: 650px;
+}
+
+header h6 {
+    color: var(--rojo);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-family: "DM Sans", sans-serif;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--titulos);
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: nowrap;
+    font-family: "Space Grotesk", sans-serif; /* Aplicando Space Grotesk al encabezado */
+}
+
+header > p {
+    color: var(--bordesYdescripcion);
+    max-width: 350px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+.contenedor-perritos {
+    padding: 0 6rem 6rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.perrito {
+    background-color: var(--perritos);
+    border: 1px solid #d5cebf;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perrito:hover {
+    transform: scale(1.03);
+    background-color: var(--perritos-hover);
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cabeza-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #d5cebf;
+    font-size: 0.75rem;
+    color: var(--bordesYdescripcion);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.cabeza-tarjeta .num {
+    font-weight: bold;
+}
+
+.perrito .img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 1px solid #d5cebf;
+}
+
+.perrito .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.perrito:hover .img img {
+    transform: scale(1.05);
+}
+
+.info-tarjeta {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-tarjeta h6 {
+    color: var(--rojo);
+    margin-bottom: 0px !important;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.info-tarjeta h2.titulo {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--titulos);
+    font-family: "Space Grotesk", sans-serif; /* Aplicando Space Grotesk a los nombres de los perritos */
+}
+
+.info-tarjeta p.descri {
+    margin: 0;
+    color: var(--bordesYdescripcion);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: "DM Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 4rem 4rem 2rem 4rem;
+    }
+    .contenedor-perritos {
+        padding: 0 4rem 4rem 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0; 
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 4rem 6rem 2rem 6rem;
+    }
+    .contenedor-perritos {
+        padding: 0 6rem 6rem 6rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
