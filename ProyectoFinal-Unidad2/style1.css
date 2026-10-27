@@ -1,0 +1,235 @@
+body {
+    background-color: #0f0e17;
+    color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.div-encabezado {
+    background-color: #161524;
+    border-bottom: 1px solid #2d2b42;
+    padding: 15px 0;
+}
+.div-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+.logo-pagina {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #9d4edd;
+    text-decoration: none;
+}
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.enlace-menu {
+    color: #a0a0b0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.enlace-menu:hover, .enlace-menu.activo {
+    color: #9d4edd;
+}
+.clase-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.seccion-bienvenida {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+}
+.titulo-principal {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.texto-morado {
+    color: #9d4edd;
+}
+.subtitulo-bienvenida {
+    font-size: 1.15rem;
+    color: #a0a0b0;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+.boton-principal {
+    display: inline-block;
+    background-color: #7928ca;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.boton-principal:hover {
+    background-color: #9d4edd;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(121, 40, 202, 0.5);
+}
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+/* Interacción de elevación para las tarjetas informativas */
+.tarjeta-uno, .tarjeta-dos, .tarjeta-tres {
+    background-color: #1a1829;
+    border: 1px solid #2d2b42;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.tarjeta-uno:hover, .tarjeta-dos:hover, .tarjeta-tres:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(157, 78, 221, 0.3);
+    border-color: #9d4edd;
+}
+.icono-tarjeta {
+    font-size: 2.8rem;
+    color: #9d4edd;
+    margin-bottom: 15px;
+}
+.titulo-tarjeta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+.texto-tarjeta {
+    color: #a0a0b0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+.texto-resaltado {
+    background-color: rgba(157, 78, 221, 0.2);
+    color: #d8b4fe;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.pie-pagina {
+    text-align: center;
+    padding: 25px 20px;
+    border-top: 1px solid #2d2b42;
+    color: #808095;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .div-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .titulo-principal {
+        font-size: 2rem;
+    }
+}
+
+/* ==== HTML ===== */
+
+.contenedor-extra-innecesario {
+    display: block;
+    width: 100%;
+    /* width: 95%; lo regrese a 100 porque se veia chueco */
+}
+.caja-contenido {
+    background-color: #1a1829;
+    border: 1px solid #2d2b42;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.subtitulo-seccion {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #9d4edd;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2d2b42;
+    padding-bottom: 10px;
+}
+.texto-normal {
+    color: #a0a0b0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+/* Estilo para los fragmentos de código */
+.bloque-codigo {
+    background-color: #000000;
+    border-left: 4px solid #7928ca;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: monospace;
+    color: #d8b4fe;
+    overflow-x: auto;
+}
+.etiqueta {
+    color: #ff7b72;
+}
+.lista-ejemplos {
+    color: #a0a0b0;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+.lista-ejemplos strong {
+    color: #ffffff;
+    background-color: rgba(157, 78, 221, 0.15);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+.caja-tip {
+    background-color: rgba(157, 78, 221, 0.1);
+    border: 1px solid violet;
+    border: 2px solid #9d4edd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.titulo-tip {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+.rejilla-etiquetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+.categoria-etiquetas {
+    background-color: rgba(26, 24, 41, 0.6);
+    border-left: 3px solid #7928ca;
+    padding: 15px;
+    border-radius: 6px;
+}
+.categoria-etiquetas h4 {
+    color: #d8b4fe;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}

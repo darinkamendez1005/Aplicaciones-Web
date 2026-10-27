@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevWeb Hub - Biblioteca HTML</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="style1.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header class="div-encabezado">
+        <nav class="div-menu">
+            <a href="index.html" class="logo-pagina">
+                <i class="fa-solid fa-code"></i> DevWeb Hub
+            </a>
+            <ul class="lista-menu">
+                <li><a href="index.html" class="enlace-menu">Inicio</a></li>
+                <li><a href="html.html" class="enlace-menu activo">HTML</a></li>
+                <li><a href="css.html" class="enlace-menu">CSS</a></li>
+                <li><a href="javascript.html" class="enlace-menu">JavaScript</a></li>
+                <li><a href="contacto.html" class="enlace-menu">Opinión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="clase-principal">
+        
+        <section class="seccion-bienvenida" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="titulo-principal">
+                Fundamentos de <span class="texto-morado">HTML5</span>
+            </h1>
+            <p class="subtitulo-bienvenida">
+                Biblioteca técnica de referencia: estructuras, fragmentos de código, glosario de etiquetas y directrices de desarrollo.
+            </p>
+        </section>
+
+        <!-- informacion tecnica -->
+        <div class="contenedor-extra-innecesario">
+            
+            <!-- Fragmentos de Código -->
+            <article class="caja-contenido" data-aos="fade-up">
+                <h2 class="subtitulo-seccion"><i class="fa-solid fa-laptop-code"></i> 1. Estructuras Básicas de Código</h2>
+                <p class="texto-normal">
+                    La codificación en HTML requiere la comprensión de patrones estructurales. A continuación, se documentan los bloques fundamentales para la construcción de interfaces.
+                </p>
+                
+                <!-- Fragmento 1: Estructura Raíz -->
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Plantilla Raíz del Documento</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span class="etiqueta">&lt;!DOCTYPE html&gt;</span><br>
+<span class="etiqueta">&lt;html lang="es"&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;head&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;meta charset="UTF-8"&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;title&gt;</span>Documento Base<span class="etiqueta">&lt;/title&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;/head&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;body&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #8b949e;">&lt;!-- El contenido visual se inserta aquí --&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;/body&gt;</span><br>
+<span class="etiqueta">&lt;/html&gt;</span>
+                    </code>
+                </div>
+
+                <!-- Fragmento 2: Textos y Párrafos -->
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Jerarquía Tipográfica y Párrafos</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span class="etiqueta">&lt;h1&gt;</span>Título Principal (Único por página)<span class="etiqueta">&lt;/h1&gt;</span><br>
+<span class="etiqueta">&lt;h2&gt;</span>Subtítulo de Sección<span class="etiqueta">&lt;/h2&gt;</span><br>
+<span class="etiqueta">&lt;p&gt;</span>Este es un bloque de texto que representa un párrafo. Puede contener elementos integrados como <span class="etiqueta">&lt;strong&gt;</span>texto en negrita<span class="etiqueta">&lt;/strong&gt;</span> o <span class="etiqueta">&lt;em&gt;</span>texto en cursiva<span class="etiqueta">&lt;/em&gt;</span>.<span class="etiqueta">&lt;/p&gt;</span>
+                    </code>
+                </div>
+
+                <!-- Fragmento 3: Lista -->
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">C. Estructuración de Listas</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">&lt;!-- Lista Desordenada (Viñetas) --&gt;</span><br>
+<span class="etiqueta">&lt;ul&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Elemento de lista 1<span class="etiqueta">&lt;/li&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Elemento de lista 2<span class="etiqueta">&lt;/li&gt;</span><br>
+<span class="etiqueta">&lt;/ul&gt;</span><br>
+<br>
+<span style="color: #8b949e;">&lt;!-- Lista Ordenada (Números) --&gt;</span><br>
+<span class="etiqueta">&lt;ol&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Primer paso<span class="etiqueta">&lt;/li&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Segundo paso<span class="etiqueta">&lt;/li&gt;</span><br>
+<span class="etiqueta">&lt;/ol&gt;</span>
+                    </code>
+                </div>
+
+                <!-- Fragmento 4: Hipervínculos e Imágenes -->
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">D. Hipervínculos e Inserción de Imágenes</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">&lt;!-- Enlace externo abriendo en nueva pestaña --&gt;</span><br>
+<span class="etiqueta">&lt;a href="https://ejemplo.com" target="_blank"&gt;</span>Visitar sitio externo<span class="etiqueta">&lt;/a&gt;</span><br>
+<br>
+<span style="color: #8b949e;">&lt;!-- Imagen con texto alternativo para accesibilidad --&gt;</span><br>
+<span class="etiqueta">&lt;img src="ruta/a/la/imagen.jpg" alt="Descripción detallada de la imagen para lectores de pantalla" width="500"&gt;</span>
+                    </code>
+                </div>
+
+                <!-- Fragmento 5: Multimedia (Video y Audio) -->
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">E. Integración Multimedia (Video y Audio)</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">&lt;!-- Etiqueta de Video con controles interactivos --&gt;</span><br>
+<span class="etiqueta">&lt;video controls width="100%"&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;source src="video-presentacion.mp4" type="video/mp4"&gt;</span><br>
+&nbsp;&nbsp;Tu navegador no soporta la etiqueta de video.<br>
+<span class="etiqueta">&lt;/video&gt;</span><br>
+<br>
+<span style="color: #8b949e;">&lt;!-- Etiqueta de Audio --&gt;</span><br>
+<span class="etiqueta">&lt;audio controls&gt;</span><br>
+&nbsp;&nbsp;<span class="etiqueta">&lt;source src="pista-audio.mp3" type="audio/mpeg"&gt;</span><br>
+<span class="etiqueta">&lt;/audio&gt;</span>
+                    </code>
+                </div>
+            </article>
+
+            <!-- GLOSARIO DE ETIQUETAS -->
+            <!-- puse un monton de etiquetas agrupadas para que no se vea desordenado -->
+            <article class="caja-contenido" data-aos="fade-up">
+                <h2 class="subtitulo-seccion"><i class="fa-solid fa-layer-group"></i> 2. Repertorio Extenso de Elementos HTML5</h2>
+                <p class="texto-normal">
+                    Clasificación técnica de las etiquetas fundamentales y avanzadas disponibles en el estándar HTML5 para el desarrollo estructural.
+                </p>
+                
+                <div class="rejilla-etiquetas">
+                    <div class="categoria-etiquetas">
+                        <h4>Estructura Semántica</h4>
+                        <ul class="lista-ejemplos">
+                            <li><strong>&lt;header&gt;</strong>: Cabecera.</li>
+                            <li><strong>&lt;nav&gt;</strong>: Navegación principal.</li>
+                            <li><strong>&lt;main&gt;</strong>: Contenido principal.</li>
+                            <li><strong>&lt;section&gt;</strong>: Sección genérica temática.</li>
+                            <li><strong>&lt;article&gt;</strong>: Contenido autónomo.</li>
+                            <li><strong>&lt;aside&gt;</strong>: Contenido lateral/tangencial.</li>
+                            <li><strong>&lt;footer&gt;</strong>: Pie de página.</li>
+                            <li><strong>&lt;div&gt;</strong>: Contenedor en bloque.</li>
+                        </ul>
+                    </div>
+
+                    <div class="categoria-etiquetas">
+                        <h4>Formato de Texto</h4>
+                        <ul class="lista-ejemplos">
+                            <li><strong>&lt;h1&gt; - &lt;h6&gt;</strong>: Niveles de encabezado.</li>
+                            <li><strong>&lt;p&gt;</strong>: Párrafo.</li>
+                            <li><strong>&lt;span&gt;</strong>: Contenedor en línea.</li>
+                            <li><strong>&lt;strong&gt;</strong>: Importancia grave (negrita).</li>
+                            <li><strong>&lt;em&gt;</strong>: Énfasis (cursiva).</li>
+                            <li><strong>&lt;mark&gt;</strong>: Texto resaltado.</li>
+                            <li><strong>&lt;br&gt;</strong>: Salto de línea.</li>
+                            <li><strong>&lt;hr&gt;</strong>: Regla horizontal.</li>
+                            <li><strong>&lt;blockquote&gt;</strong>: Cita en bloque.</li>
+                            <li><strong>&lt;code&gt;</strong>: Fragmento de código.</li>
+                        </ul>
+                    </div>
+
+                    <div class="categoria-etiquetas">
+                        <h4>Formularios y Entradas</h4>
+                        <ul class="lista-ejemplos">
+                            <li><strong>&lt;form&gt;</strong>: Formulario interactivo.</li>
+                            <li><strong>&lt;input&gt;</strong>: Campo de entrada de datos.</li>
+                            <li><strong>&lt;textarea&gt;</strong>: Área de texto multilínea.</li>
+                            <li><strong>&lt;button&gt;</strong>: Botón cliqueable.</li>
+                            <li><strong>&lt;select&gt;</strong>: Menú desplegable.</li>
+                            <li><strong>&lt;option&gt;</strong>: Opción dentro del select.</li>
+                            <li><strong>&lt;label&gt;</strong>: Etiqueta descriptiva.</li>
+                            <li><strong>&lt;fieldset&gt;</strong>: Agrupación de controles.</li>
+                        </ul>
+                    </div>
+
+                    <div class="categoria-etiquetas">
+                        <h4>Multimedia y Tablas</h4>
+                        <ul class="lista-ejemplos">
+                            <li><strong>&lt;img&gt;</strong>: Imagen estática.</li>
+                            <li><strong>&lt;video&gt;</strong>: Reproductor de video.</li>
+                            <li><strong>&lt;audio&gt;</strong>: Reproductor de audio.</li>
+                            <li><strong>&lt;iframe&gt;</strong>: Marco integrado.</li>
+                            <li><strong>&lt;table&gt;</strong>: Contenedor de tabla.</li>
+                            <li><strong>&lt;tr&gt;</strong>: Fila de tabla.</li>
+                            <li><strong>&lt;th&gt;</strong>: Celda de encabezado.</li>
+                            <li><strong>&lt;td&gt;</strong>: Celda de datos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TIPS DE SUPERVIVENCIA -->
+            <article class="caja-tip" data-aos="fade-left">
+                <h3 class="titulo-tip"><i class="fa-solid fa-triangle-exclamation"></i> Decálogo de Supervivencia en Desarrollo Web</h3>
+                <p class="texto-normal" style="margin-bottom: 10px;">Directrices operativas para evitar errores críticos durante la maquetación:</p>
+                
+                <ol class="lista-ejemplos" style="color: #d8b4fe;">
+                    <li><strong style="background-color: transparent; padding: 0;">Cierre de etiquetas:</strong> La omisión de etiquetas de cierre (como <code>&lt;/div&gt;</code> o <code>&lt;/a&gt;</code>) provoca el colapso estructural del Document Object Model (DOM) y rompe las rejillas CSS.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Jerarquía tipográfica inquebrantable:</strong> Debe existir un único <code>&lt;h1&gt;</code> por documento para garantizar el rendimiento SEO. No se deben saltar niveles (por ejemplo, pasar de H2 a H4 sin un H3 intermedio).</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Rutas de archivos precisas:</strong> La distinción entre rutas relativas (ej. <code>style1.css</code>) y absolutas (ej. <code>https://...</code>) es vital. Un error tipográfico en la ruta genera interfaces carentes de estilos o imágenes rotas.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Atributo 'alt' irrenunciable:</strong> Toda etiqueta <code>&lt;img&gt;</code> debe incluir el atributo <code>alt</code> para asegurar la accesibilidad a lectores de pantalla y proveer contexto si el recurso no carga.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Indentación metódica:</strong> La anidación de elementos (padres e hijos) debe reflejarse visualmente mediante tabulaciones. Un código sin sangría resulta incomprensible en etapas de depuración.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Comentarios estratégicos:</strong> Utilice <code>&lt;!-- Comentario --&gt;</code> para seccionar lógicamente áreas extensas de código (ej. "Inicio del Menú", "Fin del Formulario").</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Nomenclatura de archivos:</strong> Los nombres de archivos HTML y recursos deben estar íntegramente en minúsculas, sin espacios ni caracteres especiales, utilizando guiones para separar palabras (ej. <code>mi-pagina.html</code>).</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Destino de enlaces externos:</strong> Incorpore siempre el atributo <code>target="_blank"</code> en enlaces hacia otros dominios para evitar que el usuario abandone prematuramente su sitio web.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Priorización de etiquetas semánticas:</strong> Sustituya el uso excesivo de <code>&lt;div&gt;</code> genéricos por contenedores con valor semántico como <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code> y <code>&lt;section&gt;</code>.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Validación continua:</strong> Someta el código regularmente al servicio de validación del W3C (World Wide Web Consortium) para detectar anomalías sintácticas inadvertidas.</li>
+                </ol>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

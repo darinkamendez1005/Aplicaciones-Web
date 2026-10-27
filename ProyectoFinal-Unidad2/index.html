@@ -4,139 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevWeb Hub - Inicio</title>
-    <!-- Google Fonts: Poppins e Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS Library CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- Estilos Personalizados y Animaciones Hover -->
-    <style>
-        body {
-            background-color: #0f0e17;
-            color: #f8f9fa;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Efecto profesional para las tarjetas al pasar el mouse */
-        .hover-card {
-            background-color: #1a1829;
-            border: 1px solid #2d2b42;
-            transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                        box-shadow 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                        border-color 0.35s ease;
-        }
-
-        .hover-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(157, 78, 221, 0.3);
-            border-color: #9d4edd !important;
-        }
-
-        /* Botón con brillo y transición */
-        .btn-custom {
-            background-color: #7928ca;
-            border: none;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: #9d4edd;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(121, 40, 202, 0.5);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="./style1.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Encabezado y Navegación -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="index.html" style="color: #9d4edd;">
-                    <i class="fa-solid fa-code"></i> DevWeb Hub
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
-                        <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Opinión</a></li>
-                    </ul>
-                </div>
-            </div>
+    <header class="div-encabezado">
+        <nav class="div-menu">
+            <a href="index.html" class="logo-pagina">
+                <i class="fa-solid fa-code"></i> DevWeb Hub
+            </a>
+            <ul class="lista-menu">
+                <li><a href="index.html" class="enlace-menu activo">Inicio</a></li>
+                <li><a href="html.html" class="enlace-menu">HTML</a></li>
+                <li><a href="css.html" class="enlace-menu">CSS</a></li>
+                <li><a href="javascript.html" class="enlace-menu">JavaScript</a></li>
+                <li><a href="contacto.html" class="enlace-menu">Opinión</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="container my-5">
-        <!-- Sección de Bienvenida (Héroe) -->
-        <section class="text-center py-5" data-aos="fade-down" data-aos-duration="1000">
-            <h1 class="display-4 fw-bold mb-3" style="font-family: 'Poppins', sans-serif; color: #ffffff;">
-                DOMINA EL DESARROLLO <span style="color: #9d4edd;">WEB MODERNO</span>
+    <main class="clase-principal">
+        
+        <!-- bienvenida -->
+        <section class="seccion-bienvenida" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="titulo-principal">
+                DOMINA EL DESARROLLO <span class="texto-morado">WEB MODERNO</span>
             </h1>
-            <p class="lead text-secondary mb-4">
+            <p class="subtitulo-bienvenida">
                 Guía interactiva estructurada bajo estándares profesionales, utilizando etiquetas semánticas y diseño adaptable.
             </p>
-            <a href="html.html" class="btn btn-custom btn-lg px-4 py-2 text-white fw-semibold">
-                Comenzar Exploración <i class="fa-solid fa-arrow-right ms-2"></i>
+            <a href="html.html" class="boton-principal">
+                Comenzar Exploración <i class="fa-solid fa-arrow-right"></i>
             </a>
         </section>
 
-        <!-- Tarjetas de Acceso a Módulos con Rejilla y Hover Interactivo -->
-        <div class="row g-4 mt-4">
-            <div class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-right" data-aos-duration="1200">
-                <div class="p-4 rounded h-100 hover-card">
-                    <div class="mb-3 text-center" style="font-size: 2.5rem; color: #9d4edd;">
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <h3 class="h4 text-center fw-bold">Estructura HTML5</h3>
-                    <p class="text-secondary text-center">
-                        Aprende sobre el árbol DOM, etiquetas semánticas esenciales (<mark>header</mark>, <mark>main</mark>, <mark>section</mark>) y elementos de estructuración.
-                    </p>
+        <!-- tarjetas interactivas -->
+        <div class="contenedor-tarjetas">
+            
+            <div class="tarjeta-uno" data-aos="fade-right" data-aos-duration="1200">
+                <div class="icono-tarjeta">
+                    <i class="fa-brands fa-html5"></i>
                 </div>
+                <h3 class="titulo-tarjeta">Estructura HTML5</h3>
+                <p class="texto-tarjeta">
+                    Aprende sobre el árbol DOM, etiquetas semánticas esenciales (<span class="texto-resaltado">header</span>, <span class="texto-resaltado">main</span>, <span class="texto-resaltado">section</span>) y elementos de estructuración.
+                </p>
             </div>
 
-            <div class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1200">
-                <div class="p-4 rounded h-100 hover-card">
-                    <div class="mb-3 text-center" style="font-size: 2.5rem; color: #9d4edd;">
-                        <i class="fa-brands fa-css3-alt"></i>
-                    </div>
-                    <h3 class="h4 text-center fw-bold">Estilos CSS3</h3>
-                    <p class="text-secondary text-center">
-                        Descubre el funcionamiento de rejillas dinámicas, utilidades <strong>Flexbox</strong> y paletas de colores armónicas para interfaces profesionales.
-                    </p>
+            <div class="tarjeta-dos" data-aos="fade-up" data-aos-duration="1200">
+                <div class="icono-tarjeta">
+                    <i class="fa-brands fa-css3-alt"></i>
                 </div>
+                <h3 class="titulo-tarjeta">Estilos CSS3</h3>
+                <p class="texto-tarjeta">
+                    Descubre el funcionamiento de rejillas dinámicas, utilidades <strong>Flexbox</strong> y paletas de colores armónicas para interfaces profesionales.
+                </p>
             </div>
 
-            <div class="col-xl-4 col-md-6 col-sm-12" data-aos="fade-left" data-aos-duration="1200">
-                <div class="p-4 rounded h-100 hover-card">
-                    <div class="mb-3 text-center" style="font-size: 2.5rem; color: #9d4edd;">
-                        <i class="fa-brands fa-js"></i>
-                    </div>
-                    <h3 class="h4 text-center fw-bold">Lógica JavaScript</h3>
-                    <p class="text-secondary text-center">
-                        Implementación de eventos, selectores avanzados y validación interactiva de formularios del lado cliente con librerías modernas.
-                    </p>
+            <div class="tarjeta-tres" data-aos="fade-left" data-aos-duration="1200">
+                <div class="icono-tarjeta">
+                    <i class="fa-brands fa-js"></i>
                 </div>
+                <h3 class="titulo-tarjeta">Lógica JavaScript</h3>
+                <p class="texto-tarjeta">
+                    Implementación de eventos, selectores avanzados y validación interactiva de formularios del lado cliente con librerías modernas.
+                </p>
             </div>
+
         </div>
+
     </main>
 
-    <!-- Pie de Página -->
-    <footer class="text-center py-4 border-top border-secondary mt-5 text-secondary">
-        <p class="mb-0">&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
+    <footer class="pie-pagina">
+        <p>&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
     </footer>
 
-    <!-- Scripts de Bootstrap y AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
