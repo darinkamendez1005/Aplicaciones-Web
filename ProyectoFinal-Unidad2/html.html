@@ -9,7 +9,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="./style1.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -39,93 +38,91 @@
             </p>
         </section>
 
-        <!-- informacion tecnica -->
-        <div class="contenedor-extra-innecesario">
+        <!-- contenedor general estructurado para mantener el flujo de la pagina -->
+        <div class="contenedor-secciones">
             
-            <!-- Fragmentos de Código -->
+            <!-- article define un bloque de contenido independiente y autonomo (teoria de HTML) -->
             <article class="caja-contenido" data-aos="fade-up">
+                <!-- la etiqueta i junto con la clase fa-laptop-code dibuja el icono de la laptop con codigo -->
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-laptop-code"></i> 1. Estructuras Básicas de Código</h2>
                 <p class="texto-normal">
                     La codificación en HTML requiere la comprensión de patrones estructurales. A continuación, se documentan los bloques fundamentales para la construcción de interfaces.
                 </p>
                 
-                <!-- Fragmento 1: Estructura Raíz -->
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Plantilla Raíz del Documento</h3>
                 <div class="bloque-codigo">
+                    <!-- la etiqueta <code> cambia la tipografia a tipo consola para mostrar fragmentos de codigo -->
                     <code>
-<span class="etiqueta">&lt;!DOCTYPE html&gt;</span><br>
-<span class="etiqueta">&lt;html lang="es"&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;head&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;meta charset="UTF-8"&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;title&gt;</span>Documento Base<span class="etiqueta">&lt;/title&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;/head&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;body&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #8b949e;">&lt;!-- El contenido visual se inserta aquí --&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;/body&gt;</span><br>
-<span class="etiqueta">&lt;/html&gt;</span>
+                        <!-- &lt; y &gt; son entidades HTML que sirven para mostrar los simbolos < y > en pantalla sin romper la pagina -->
+                        <span class="etiqueta">&lt;!DOCTYPE html&gt;</span><br>
+                        <span class="etiqueta">&lt;html lang="es"&gt;</span><br>
+                        <!-- &nbsp; inserta espacios en blanco equivalentes a tabulaciones para hacer las sangrias visuales -->
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;head&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;meta charset="UTF-8"&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;title&gt;</span>Documento Base<span class="etiqueta">&lt;/title&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;/head&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;body&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #8b949e;">&lt;!-- El contenido visual se inserta aquí --&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;/body&gt;</span><br>
+                        <span class="etiqueta">&lt;/html&gt;</span>
                     </code>
                 </div>
 
-                <!-- Fragmento 2: Textos y Párrafos -->
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Jerarquía Tipográfica y Párrafos</h3>
                 <div class="bloque-codigo">
                     <code>
-<span class="etiqueta">&lt;h1&gt;</span>Título Principal (Único por página)<span class="etiqueta">&lt;/h1&gt;</span><br>
-<span class="etiqueta">&lt;h2&gt;</span>Subtítulo de Sección<span class="etiqueta">&lt;/h2&gt;</span><br>
-<span class="etiqueta">&lt;p&gt;</span>Este es un bloque de texto que representa un párrafo. Puede contener elementos integrados como <span class="etiqueta">&lt;strong&gt;</span>texto en negrita<span class="etiqueta">&lt;/strong&gt;</span> o <span class="etiqueta">&lt;em&gt;</span>texto en cursiva<span class="etiqueta">&lt;/em&gt;</span>.<span class="etiqueta">&lt;/p&gt;</span>
+                        <span class="etiqueta">&lt;h1&gt;</span>Título Principal (Único por página)<span class="etiqueta">&lt;/h1&gt;</span><br>
+                        <span class="etiqueta">&lt;h2&gt;</span>Subtítulo de Sección<span class="etiqueta">&lt;/h2&gt;</span><br>
+                        <span class="etiqueta">&lt;p&gt;</span>Este es un bloque de texto que representa un párrafo. Puede contener elementos integrados como <span class="etiqueta">&lt;strong&gt;</span>texto en negrita<span class="etiqueta">&lt;/strong&gt;</span> o <span class="etiqueta">&lt;em&gt;</span>texto en cursiva<span class="etiqueta">&lt;/em&gt;</span>.<span class="etiqueta">&lt;/p&gt;</span>
                     </code>
                 </div>
 
-                <!-- Fragmento 3: Lista -->
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">C. Estructuración de Listas</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">&lt;!-- Lista Desordenada (Viñetas) --&gt;</span><br>
-<span class="etiqueta">&lt;ul&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Elemento de lista 1<span class="etiqueta">&lt;/li&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Elemento de lista 2<span class="etiqueta">&lt;/li&gt;</span><br>
-<span class="etiqueta">&lt;/ul&gt;</span><br>
-<br>
-<span style="color: #8b949e;">&lt;!-- Lista Ordenada (Números) --&gt;</span><br>
-<span class="etiqueta">&lt;ol&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Primer paso<span class="etiqueta">&lt;/li&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Segundo paso<span class="etiqueta">&lt;/li&gt;</span><br>
-<span class="etiqueta">&lt;/ol&gt;</span>
+                        <span style="color: #8b949e;">&lt;!-- Lista Desordenada (Viñetas) --&gt;</span><br>
+                        <span class="etiqueta">&lt;ul&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Elemento de lista 1<span class="etiqueta">&lt;/li&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Elemento de lista 2<span class="etiqueta">&lt;/li&gt;</span><br>
+                        <span class="etiqueta">&lt;/ul&gt;</span><br>
+                        <br>
+                        <span style="color: #8b949e;">&lt;!-- Lista Ordenada (Números) --&gt;</span><br>
+                        <span class="etiqueta">&lt;ol&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Primer paso<span class="etiqueta">&lt;/li&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;li&gt;</span>Segundo paso<span class="etiqueta">&lt;/li&gt;</span><br>
+                        <span class="etiqueta">&lt;/ol&gt;</span>
                     </code>
                 </div>
 
-                <!-- Fragmento 4: Hipervínculos e Imágenes -->
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">D. Hipervínculos e Inserción de Imágenes</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">&lt;!-- Enlace externo abriendo en nueva pestaña --&gt;</span><br>
-<span class="etiqueta">&lt;a href="https://ejemplo.com" target="_blank"&gt;</span>Visitar sitio externo<span class="etiqueta">&lt;/a&gt;</span><br>
-<br>
-<span style="color: #8b949e;">&lt;!-- Imagen con texto alternativo para accesibilidad --&gt;</span><br>
-<span class="etiqueta">&lt;img src="ruta/a/la/imagen.jpg" alt="Descripción detallada de la imagen para lectores de pantalla" width="500"&gt;</span>
+                        <span style="color: #8b949e;">&lt;!-- Enlace externo abriendo en nueva pestaña --&gt;</span><br>
+                        <span class="etiqueta">&lt;a href="https://ejemplo.com" target="_blank"&gt;</span>Visitar sitio externo<span class="etiqueta">&lt;/a&gt;</span><br>
+                        <br>
+                        <span style="color: #8b949e;">&lt;!-- Imagen con texto alternativo para accesibilidad --&gt;</span><br>
+                        <span class="etiqueta">&lt;img src="ruta/a/la/imagen.jpg" alt="Descripción detallada de la imagen para lectores de pantalla" width="500"&gt;</span>
                     </code>
                 </div>
 
-                <!-- Fragmento 5: Multimedia (Video y Audio) -->
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">E. Integración Multimedia (Video y Audio)</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">&lt;!-- Etiqueta de Video con controles interactivos --&gt;</span><br>
-<span class="etiqueta">&lt;video controls width="100%"&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;source src="video-presentacion.mp4" type="video/mp4"&gt;</span><br>
-&nbsp;&nbsp;Tu navegador no soporta la etiqueta de video.<br>
-<span class="etiqueta">&lt;/video&gt;</span><br>
-<br>
-<span style="color: #8b949e;">&lt;!-- Etiqueta de Audio --&gt;</span><br>
-<span class="etiqueta">&lt;audio controls&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;source src="pista-audio.mp3" type="audio/mpeg"&gt;</span><br>
-<span class="etiqueta">&lt;/audio&gt;</span>
+                        <span style="color: #8b949e;">&lt;!-- Etiqueta de Video con controles interactivos --&gt;</span><br>
+                        <span class="etiqueta">&lt;video controls width="100%"&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;source src="video-presentacion.mp4" type="video/mp4"&gt;</span><br>
+                        &nbsp;&nbsp;Tu navegador no soporta la etiqueta de video.<br>
+                        <span class="etiqueta">&lt;/video&gt;</span><br>
+                        <br>
+                        <span style="color: #8b949e;">&lt;!-- Etiqueta de Audio --&gt;</span><br>
+                        <span class="etiqueta">&lt;audio controls&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;source src="pista-audio.mp3" type="audio/mpeg"&gt;</span><br>
+                        <span class="etiqueta">&lt;/audio&gt;</span>
                     </code>
                 </div>
             </article>
 
-            <!-- GLOSARIO DE ETIQUETAS -->
-            <!-- puse un monton de etiquetas agrupadas para que no se vea desordenado -->
+            <!-- seccion de glosario organizada mediante una rejilla de CSS Grid -->
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-layer-group"></i> 2. Repertorio Extenso de Elementos HTML5</h2>
                 <p class="texto-normal">
@@ -193,7 +190,7 @@
                 </div>
             </article>
 
-            <!-- TIPS DE SUPERVIVENCIA -->
+            <!-- decálogo de buenas prácticas y prevención de errores -->
             <article class="caja-tip" data-aos="fade-left">
                 <h3 class="titulo-tip"><i class="fa-solid fa-triangle-exclamation"></i> Decálogo de Supervivencia en Desarrollo Web</h3>
                 <p class="texto-normal" style="margin-bottom: 10px;">Directrices operativas para evitar errores críticos durante la maquetación:</p>

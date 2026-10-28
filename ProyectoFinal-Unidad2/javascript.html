@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevWeb Hub - Biblioteca JavaScript</title>
     
-    <!-- Fuentes, Bootstrap, AOS y FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -40,7 +39,7 @@
             </p>
         </section>
 
-        <div class="contenedor-extra-innecesario">
+        <div class="contenedor-secciones">
             
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-terminal"></i> 1. Sintaxis Básica y Funciones</h2>
@@ -51,74 +50,71 @@
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Variables (El almacenamiento)</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">// 'const' es para valores que NO van a cambiar nunca</span><br>
-<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">rolUsuario</span> = <span style="color: #a5d6ff;">"Estudiante"</span>;<br><br>
-<span style="color: #8b949e;">// 'let' es para valores que SÍ van a cambiar en el futuro</span><br>
-<span style="color: #ff7b72;">let</span> <span style="color: #79c0ff;">calificacion</span> = <span style="color: #a5d6ff;">85</span>;<br>
-calificacion = <span style="color: #a5d6ff;">100</span>; <span style="color: #8b949e;">// Actualizando el valor</span>
+                        <span style="color: #8b949e;">// 'const' se usa para declarar variables cuyo valor no va a cambiar</span><br>
+                        <span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">rolUsuario</span> = <span style="color: #a5d6ff;">"Estudiante"</span>;<br><br>
+                        <span style="color: #8b949e;">// 'let' se usa para variables cuyo valor si podra modificarse despues</span><br>
+                        <span style="color: #ff7b72;">let</span> <span style="color: #79c0ff;">calificacion</span> = <span style="color: #a5d6ff;">85</span>;<br>
+                        calificacion = <span style="color: #a5d6ff;">100</span>; <span style="color: #8b949e;">// Aqui actualizamos el valor de let</span>
                     </code>
                 </div>
 
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Funciones (Las acciones)</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">// Creamos la función (no se ejecuta sola, solo se guarda)</span><br>
-<span style="color: #ff7b72;">function</span> <span style="color: #d2a8ff;">mostrarMensaje</span>() {<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">console</span>.<span style="color: #d2a8ff;">log</span>(<span style="color: #a5d6ff;">"Este mensaje se muestra en la consola oculta (F12)"</span>);<br>
-}<br><br>
-<span style="color: #8b949e;">// Así es como llamamos a la función para que trabaje</span><br>
-<span style="color: #d2a8ff;">mostrarMensaje</span>();
+                        <span style="color: #8b949e;">// Declaramos una funcion para agrupar instrucciones que se ejecutaran juntas</span><br>
+                        <span style="color: #ff7b72;">function</span> <span style="color: #d2a8ff;">mostrarMensaje</span>() {<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">console</span>.<span style="color: #d2a8ff;">log</span>(<span style="color: #a5d6ff;">"Este mensaje se imprime en la consola oculta (F12)"</span>);<br>
+                        }<br><br>
+                        <span style="color: #8b949e;">// Llamamos a la funcion para que realice su tarea</span><br>
+                        <span style="color: #d2a8ff;">mostrarMensaje</span>();
                     </code>
                 </div>
             </article>
 
-            <!-- SECCIÓN 2: EL DOM (DOCUMENT OBJECT MODEL) -->
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-sitemap"></i> 2. Manipulación del DOM (Conectar HTML y JS)</h2>
                 <p class="texto-normal">
-                    El <strong>DOM</strong> es la forma en que JavaScript ve a tu HTML: como un árbol de elementos. Para modificar un título o una caja, primero debemos "seleccionarla".
+                    El <strong>DOM</strong> es la estructura en forma de árbol que crea el navegador. JavaScript lo utiliza para encontrar etiquetas HTML y modificarlas en tiempo real.
                 </p>
                 
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Seleccionar Elementos (querySelector)</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">// Buscamos el primer elemento que tenga la clase "caja-contenido"</span><br>
-<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">miCaja</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelector</span>(<span style="color: #a5d6ff;">'.caja-contenido'</span>);<br><br>
-<span style="color: #8b949e;">// Buscamos TODOS los elementos que sean párrafos &lt;p&gt;</span><br>
-<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">todosLosParrafos</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelectorAll</span>(<span style="color: #a5d6ff;">'p'</span>);
+                        <span style="color: #8b949e;">// querySelector busca en el documento el primer elemento con esa clase</span><br>
+                        <span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">miCaja</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelector</span>(<span style="color: #a5d6ff;">'.caja-contenido'</span>);<br><br>
+                        <span style="color: #8b949e;">// querySelectorAll busca absolutamente todos los parrafos &lt;p&gt;</span><br>
+                        <span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">todosLosParrafos</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelectorAll</span>(<span style="color: #a5d6ff;">'p'</span>);
                     </code>
                 </div>
 
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Modificar Clases y Textos</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">// Cambiar el texto que está dentro del HTML</span><br>
-miCaja.<span style="color: #79c0ff;">textContent</span> = <span style="color: #a5d6ff;">"¡He hackeado este texto con JavaScript!"</span>;<br><br>
-<span style="color: #8b949e;">// Agregar o quitar clases de CSS en vivo (classList)</span><br>
-miCaja.<span style="color: #79c0ff;">classList</span>.<span style="color: #d2a8ff;">add</span>(<span style="color: #a5d6ff;">'ocultar-elemento'</span>); <span style="color: #8b949e;">// Le pone la clase</span><br>
-miCaja.<span style="color: #79c0ff;">classList</span>.<span style="color: #d2a8ff;">remove</span>(<span style="color: #a5d6ff;">'ocultar-elemento'</span>); <span style="color: #8b949e;">// Le quita la clase</span>
+                        <span style="color: #8b949e;">// textContent reemplaza el texto interno del elemento seleccionado</span><br>
+                        miCaja.<span style="color: #79c0ff;">textContent</span> = <span style="color: #a5d6ff;">"¡Texto modificado con JavaScript!"</span>;<br><br>
+                        <span style="color: #8b949e;">// classList nos permite agregar o quitar clases de CSS de forma dinamica</span><br>
+                        miCaja.<span style="color: #79c0ff;">classList</span>.<span style="color: #d2a8ff;">add</span>(<span style="color: #a5d6ff;">'clase-nueva'</span>); <span style="color: #8b949e;">/* Agrega la clase */</span><br>
+                        miCaja.<span style="color: #79c0ff;">classList</span>.<span style="color: #d2a8ff;">remove</span>(<span style="color: #a5d6ff;">'clase-nueva'</span>); <span style="color: #8b949e;">/* Remueve la clase */</span>
                     </code>
                 </div>
             </article>
 
-            <!-- SECCIÓN 3: EVENTOS (INTERACTIVIDAD) -->
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-bolt"></i> 3. Event Listeners (Escuchadores de Eventos)</h2>
                 <p class="texto-normal">
-                    Los eventos son acciones del usuario (hacer clic, teclear, mover el mouse). Usamos <code>addEventListener</code> para decirle a JavaScript: "Quédate vigilando este botón y, si le hacen clic, ejecuta esto".
+                    Los eventos detectan acciones del usuario (como un clic). Usamos <code>addEventListener</code> para vigilar un botón y ordenar qué hacer al presionarlo.
                 </p>
                 
                 <div class="bloque-codigo" style="margin-bottom: 25px;">
                     <code>
-<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">botonAccion</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelector</span>(<span style="color: #a5d6ff;">'#btn-interactivo'</span>);<br><br>
-<span style="color: #8b949e;">// Vigilamos el evento 'click'</span><br>
-botonAccion.<span style="color: #d2a8ff;">addEventListener</span>(<span style="color: #a5d6ff;">'click'</span>, <span style="color: #ff7b72;">function</span>() {<br>
-&nbsp;&nbsp;<span style="color: #d2a8ff;">alert</span>(<span style="color: #a5d6ff;">'¡El Event Listener capturó tu clic perfectamente!'</span>);<br>
-});
+                        <span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">botonAccion</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelector</span>(<span style="color: #a5d6ff;">'#btn-interactivo'</span>);<br><br>
+                        <span style="color: #8b949e;">// Vigilamos el evento 'click' sobre el boton</span><br>
+                        botonAccion.<span style="color: #d2a8ff;">addEventListener</span>(<span style="color: #a5d6ff;">'click'</span>, <span style="color: #ff7b72;">function</span>() {<br>
+                        &nbsp;&nbsp;<span style="color: #d2a8ff;">alert</span>(<span style="color: #a5d6ff;">'¡El Event Listener capturó tu clic!'</span>);<br>
+                        });
                     </code>
                 </div>
 
-                <!-- Botón Interactivo Real -->
                 <div style="text-align: center; padding: 30px; border: 2px dashed #9d4edd; border-radius: 8px; background-color: rgba(157, 78, 221, 0.05);">
                     <p class="texto-normal" style="margin-bottom: 15px; color: #ffffff;">Prueba el código interactuando con este botón real:</p>
                     <button id="btn-interactivo" class="boton-principal" style="cursor: pointer; font-size: 1.1rem;">
@@ -127,14 +123,12 @@ botonAccion.<span style="color: #d2a8ff;">addEventListener</span>(<span style="c
                 </div>
             </article>
 
-            <!-- SECCIÓN 4: REPERTORIO DE MÉTODOS (CON BOOTSTRAP) -->
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-book-journal-whills"></i> 4. Glosario de Métodos Fundamentales</h2>
                 <p class="texto-normal">
                     Recopilación de los comandos y propiedades más requeridos en el desarrollo de interfaces dinámicas y validación de formularios.
                 </p>
                 
-                <!-- Uso de Bootstrap Grid para cumplir rúbrica -->
                 <div class="row g-4 mt-2">
                     
                     <div class="col-12 col-md-6">
@@ -162,7 +156,6 @@ botonAccion.<span style="color: #d2a8ff;">addEventListener</span>(<span style="c
                 </div>
             </article>
 
-            <!-- SECCIÓN 5: DECÁLOGO DE SUPERVIVENCIA -->
             <article class="caja-tip" data-aos="fade-left">
                 <h3 class="titulo-tip"><i class="fa-solid fa-triangle-exclamation"></i> Decálogo de Supervivencia en JavaScript</h3>
                 <p class="texto-normal" style="margin-bottom: 10px;">Evita que tu código "truene" siguiendo estas 10 directrices operativas:</p>
@@ -188,22 +181,19 @@ botonAccion.<span style="color: #d2a8ff;">addEventListener</span>(<span style="c
         <p>&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
     </footer>
 
-    <!-- LIBRERÍAS EXTERNAS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- SCRIPT LOCAL: Interacción de la página -->
     <script>
-        // Inicializar animaciones de bajada (AOS)
+        // inicializamos las animaciones AOS al cargar la pagina
         AOS.init();
 
-        // Lógica de demostración para el Botón Interactivo
+        // seleccionamos el boton interactivo usando su ID mediante querySelector
         const botonPrueba = document.querySelector('#btn-interactivo');
         
+        // programamos el escuchador de eventos para reaccionar al clic del usuario
         botonPrueba.addEventListener('click', function() {
-            // Este es un alert nativo sencillo
             alert('¡Excelente trabajo! Has ejecutado exitosamente un evento en JavaScript mediante addEventListener.');
             
-            // Un pequeño truco extra: le cambiamos el color al botón para probar manipulación del DOM
+            // manipulamos el DOM en vivo cambiando el color de fondo y el texto del boton
             botonPrueba.style.backgroundColor = "#2ea043"; 
             botonPrueba.innerHTML = '<i class="fa-solid fa-check"></i> Evento Capturado';
         });

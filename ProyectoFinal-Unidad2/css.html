@@ -6,6 +6,7 @@
     <title>DevWeb Hub - Biblioteca CSS</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <!-- aqui importamos Bootstrap mediante CDN para usar su sistema de rejillas oficial (Grid System) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -39,7 +40,7 @@
             </p>
         </section>
 
-        <div class="contenedor-extra-innecesario">
+        <div class="contenedor-secciones">
             
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-paintbrush"></i> 1. Sintaxis y Reglas Básicas</h2>
@@ -50,28 +51,28 @@
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Estructura de una Regla CSS</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">/* 1. Selector (a quién vamos a modificar) */</span><br>
-<span style="color: #7ee787;">h1</span> {<br>
-&nbsp;&nbsp;<span style="color: #8b949e;">/* 2. Propiedad : Valor ; */</span><br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">color</span>: <span style="color: #a5d6ff;">#9d4edd</span>;<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">text-align</span>: <span style="color: #a5d6ff;">center</span>;<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">font-size</span>: <span style="color: #a5d6ff;">2.5rem</span>;<br>
-}
+                        <span style="color: #8b949e;">/* 1. Selector (a quién vamos a modificar) */</span><br>
+                        <span style="color: #7ee787;">h1</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #8b949e;">/* 2. Propiedad : Valor ; */</span><br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">color</span>: <span style="color: #a5d6ff;">#9d4edd</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">text-align</span>: <span style="color: #a5d6ff;">center</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">font-size</span>: <span style="color: #a5d6ff;">2.5rem</span>;<br>
+                        }
                     </code>
                 </div>
 
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Selectores de Clase y de ID</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">/* Las CLASES usan un punto (.) y se pueden repetir en varios elementos */</span><br>
-<span style="color: #d2a8ff;">.boton-principal</span> {<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">background-color</span>: <span style="color: #a5d6ff;">#7928ca</span>;<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">border-radius</span>: <span style="color: #a5d6ff;">8px</span>;<br>
-}<br><br>
-<span style="color: #8b949e;">/* Los IDs usan un hashtag (#) y deben ser únicos en toda la página */</span><br>
-<span style="color: #d2a8ff;">#cabecera-unica</span> {<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">border-bottom</span>: <span style="color: #a5d6ff;">2px solid #ffffff</span>;<br>
-}
+                        <span style="color: #8b949e;">/* Las CLASES usan un punto (.) y se pueden repetir en varios elementos */</span><br>
+                        <span style="color: #d2a8ff;">.boton-principal</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">background-color</span>: <span style="color: #a5d6ff;">#7928ca</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">border-radius</span>: <span style="color: #a5d6ff;">8px</span>;<br>
+                        }<br><br>
+                        <span style="color: #8b949e;">/* Los IDs usan un hashtag (#) y deben ser únicos en toda la página */</span><br>
+                        <span style="color: #d2a8ff;">#cabecera-unica</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">border-bottom</span>: <span style="color: #a5d6ff;">2px solid #ffffff</span>;<br>
+                        }
                     </code>
                 </div>
 
@@ -79,12 +80,12 @@
                 <p class="texto-normal" style="margin-bottom: 10px;">Todo en la web es un rectángulo. El modelo de caja define su espaciado interno (padding) y externo (margin).</p>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #d2a8ff;">.caja-ejemplo</span> {<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">width</span>: <span style="color: #a5d6ff;">300px</span>; <span style="color: #8b949e;">/* Ancho */</span><br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">padding</span>: <span style="color: #a5d6ff;">20px</span>; <span style="color: #8b949e;">/* Espacio hacia ADENTRO */</span><br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">border</span>: <span style="color: #a5d6ff;">1px solid black</span>; <span style="color: #8b949e;">/* Borde visible */</span><br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">margin</span>: <span style="color: #a5d6ff;">15px</span>; <span style="color: #8b949e;">/* Espacio hacia AFUERA (separa de otros elementos) */</span><br>
-}
+                        <span style="color: #d2a8ff;">.caja-ejemplo</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">width</span>: <span style="color: #a5d6ff;">300px</span>; <span style="color: #8b949e;">/* Ancho */</span><br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">padding</span>: <span style="color: #a5d6ff;">20px</span>; <span style="color: #8b949e;">/* Espacio hacia ADENTRO */</span><br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">border</span>: <span style="color: #a5d6ff;">1px solid black</span>; <span style="color: #8b949e;">/* Borde visible */</span><br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">margin</span>: <span style="color: #a5d6ff;">15px</span>; <span style="color: #8b949e;">/* Espacio hacia AFUERA (separa de otros elementos) */</span><br>
+                        }
                     </code>
                 </div>
             </article>
@@ -98,12 +99,12 @@
                 <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Utilidades Flexbox Nativas</h3>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">/* Centrado perfecto vertical y horizontalmente */</span><br>
-<span style="color: #d2a8ff;">.contenedor-centrado</span> {<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">display</span>: <span style="color: #a5d6ff;">flex</span>;<br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">justify-content</span>: <span style="color: #a5d6ff;">center</span>; <span style="color: #8b949e;">/* Eje Horizontal */</span><br>
-&nbsp;&nbsp;<span style="color: #79c0ff;">align-items</span>: <span style="color: #a5d6ff;">center</span>; <span style="color: #8b949e;">/* Eje Vertical */</span><br>
-}
+                        <span style="color: #8b949e;">/* Centrado perfecto vertical y horizontalmente */</span><br>
+                        <span style="color: #d2a8ff;">.contenedor-centrado</span> {<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">display</span>: <span style="color: #a5d6ff;">flex</span>;<br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">justify-content</span>: <span style="color: #a5d6ff;">center</span>; <span style="color: #8b949e;">/* Eje Horizontal */</span><br>
+                        &nbsp;&nbsp;<span style="color: #79c0ff;">align-items</span>: <span style="color: #a5d6ff;">center</span>; <span style="color: #8b949e;">/* Eje Vertical */</span><br>
+                        }
                     </code>
                 </div>
 
@@ -111,27 +112,29 @@
                 <p class="texto-normal" style="margin-bottom: 10px;">Bootstrap divide la pantalla en 12 columnas. Usamos clases en el HTML para decirle cuántas columnas ocupar según el tamaño de la pantalla (sm, md, lg).</p>
                 <div class="bloque-codigo">
                     <code>
-<span style="color: #8b949e;">&lt;!-- Ejemplo de HTML usando el Grid de Bootstrap --&gt;</span><br>
-<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"container"</span><span class="etiqueta">&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"row"</span><span class="etiqueta">&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #8b949e;">&lt;!-- En celular (12 col), en tablet (6 col), en PC (4 col) --&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"col-12 col-md-6 col-lg-4"</span><span class="etiqueta">&gt;</span>Caja 1<span class="etiqueta">&lt;/div&gt;</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"col-12 col-md-6 col-lg-4"</span><span class="etiqueta">&gt;</span>Caja 2<span class="etiqueta">&lt;/div&gt;</span><br>
-&nbsp;&nbsp;<span class="etiqueta">&lt;/div&gt;</span><br>
-<span class="etiqueta">&lt;/div&gt;</span>
+                        <span style="color: #8b949e;">&lt;!-- Ejemplo de HTML usando el Grid de Bootstrap --&gt;</span><br>
+                        <span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"container"</span><span class="etiqueta">&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"row"</span><span class="etiqueta">&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #8b949e;">&lt;!-- En celular (12 col), en tablet (6 col), en PC (4 col) --&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"col-12 col-md-6 col-lg-4"</span><span class="etiqueta">&gt;</span>Caja 1<span class="etiqueta">&lt;/div&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="etiqueta">&lt;div</span> <span style="color: #79c0ff;">class</span>=<span style="color: #a5d6ff;">"col-12 col-md-6 col-lg-4"</span><span class="etiqueta">&gt;</span>Caja 2<span class="etiqueta">&lt;/div&gt;</span><br>
+                        &nbsp;&nbsp;<span class="etiqueta">&lt;/div&gt;</span><br>
+                        <span class="etiqueta">&lt;/div&gt;</span>
                     </code>
                 </div>
             </article>
 
+            <!-- repertorio CSS que implementa de forma real el framework de Bootstrap para cumplir con la rubrica -->
             <article class="caja-contenido" data-aos="fade-up">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-swatchbook"></i> 3. Repertorio de Propiedades CSS3</h2>
                 <p class="texto-normal">
                     Clasificación de las propiedades más utilizadas para modificar el diseño visual. (<em>Nota: Esta sección está estructurada utilizando contenedores .row y .col-md-6 de Bootstrap para garantizar la adaptabilidad</em>).
                 </p>
                 
+                <!-- la clase row de Bootstrap crea un renglón flexible horizontal -->
                 <div class="row g-4 mt-2">
                     
-                    <!-- Columna 1 -->
+                    <!-- col-12 abarca todo el ancho en celulares, col-md-6 abarca la mitad en pantallas medianas o compus -->
                     <div class="col-12 col-md-6">
                         <div class="p-3" style="background-color: rgba(26, 24, 41, 0.6); border-left: 3px solid #7928ca; border-radius: 6px; height: 100%;">
                             <h4 style="color: #d8b4fe; font-family: 'Poppins', sans-serif; font-size: 1.1rem;">Texto y Tipografía</h4>
@@ -147,7 +150,6 @@
                         </div>
                     </div>
 
-                    <!-- Columna 2 -->
                     <div class="col-12 col-md-6">
                         <div class="p-3" style="background-color: rgba(26, 24, 41, 0.6); border-left: 3px solid #7928ca; border-radius: 6px; height: 100%;">
                             <h4 style="color: #d8b4fe; font-family: 'Poppins', sans-serif; font-size: 1.1rem;">Fondos y Bordes</h4>
@@ -162,7 +164,6 @@
                         </div>
                     </div>
 
-                    <!-- Columna 3 -->
                     <div class="col-12 col-md-6">
                         <div class="p-3" style="background-color: rgba(26, 24, 41, 0.6); border-left: 3px solid #7928ca; border-radius: 6px; height: 100%;">
                             <h4 style="color: #d8b4fe; font-family: 'Poppins', sans-serif; font-size: 1.1rem;">Modelo de Caja (Box Model)</h4>
@@ -176,7 +177,6 @@
                         </div>
                     </div>
 
-                    <!-- Columna 4 -->
                     <div class="col-12 col-md-6">
                         <div class="p-3" style="background-color: rgba(26, 24, 41, 0.6); border-left: 3px solid #7928ca; border-radius: 6px; height: 100%;">
                             <h4 style="color: #d8b4fe; font-family: 'Poppins', sans-serif; font-size: 1.1rem;">Posicionamiento y Flexbox</h4>
@@ -204,7 +204,7 @@
                     <li><strong style="background-color: transparent; padding: 0;">Cuidado con la herencia:</strong> Propiedades como el color y la fuente se heredan de padres a hijos, pero propiedades como el margen o los bordes, no.</li>
                     <li><strong style="background-color: transparent; padding: 0;">Mobile First real:</strong> Primero diseña para pantallas pequeñas (ancho 100%). Luego usa <code>@media queries</code> para ajustar las cosas en pantallas grandes.</li>
                     <li><strong style="background-color: transparent; padding: 0;">box-sizing: border-box es tu amigo:</strong> Úsalo siempre al inicio de tu CSS. Evita que los elementos se desborden cuando les agregas <code>padding</code> o bordes.</li>
-                    <li><strong style="background-color: transparent; padding: 0;">Unidades relativas:</strong> Prefiere usar <code>rem</code>, <code>em</code> o <code>%</code> en lugar de <code>px</code> fijos para garantizar que tu sitio sea adaptable y accesible.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Unidades relativas:</strong> Prefiere usar <code>rem</code>, <code>em</code> o <code>%</code> en lugar de <code>px` fijos para garantizar que tu sitio sea adaptable y accesible.</li>
                     <li><strong style="background-color: transparent; padding: 0;">No abuses del position: absolute:</strong> Rompe el flujo normal del documento. Úsalo solo para superponer cosas específicas (como un botón flotante).</li>
                     <li><strong style="background-color: transparent; padding: 0;">Verifica tus enlaces de fuentes:</strong> Si la tipografía no carga, revisa que el enlace de Google Fonts esté correctamente colocado en el <code>&lt;head&gt;</code> de cada HTML.</li>
                     <li><strong style="background-color: transparent; padding: 0;">Nombra bien tus clases:</strong> Usa nombres descriptivos (<code>.boton-rojo</code>) y no nombres raros o sin sentido, te ahorrará horas de confusión.</li>

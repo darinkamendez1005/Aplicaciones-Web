@@ -2,19 +2,27 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- esto hace que la pagina se adapte automaticamente a pantallas de celular, tablet y compu -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevWeb Hub - Inicio</title>
     
+    <!-- aqui conectamos Google Fonts para traer los tipos de letra bonitos (Inter y Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <!-- aqui conectamos la libreria AOS externa que se encarga de hacer las animaciones de movimiento -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- aqui conectamos Font Awesome, la libreria que nos provee todos los iconos vectoriales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- enlace a nuestra hoja de estilos unica (style1.css) -->
     <link href="./style1.css" rel="stylesheet">
 </head>
 <body>
 
+    <!-- el header y el nav forman la barra de navegacion superior que se repite en todas las paginas -->
     <header class="div-encabezado">
         <nav class="div-menu">
             <a href="index.html" class="logo-pagina">
+                <!-- la etiqueta i junto con la clase fa-code dibuja el icono de los corchetes </> -->
                 <i class="fa-solid fa-code"></i> DevWeb Hub
             </a>
             <ul class="lista-menu">
@@ -29,24 +37,30 @@
 
     <main class="clase-principal">
         
-        <!-- bienvenida -->
+        <!-- data-aos="fade-down" le indica a la libreria que este bloque debe aparecer bajando suavemente al cargar -->
         <section class="seccion-bienvenida" data-aos="fade-down" data-aos-duration="1000">
             <h1 class="titulo-principal">
-                DOMINA EL DESARROLLO <span class="texto-morado">WEB MODERNO</span>
+                DOMINA EL DESARROLLO 
+                <!-- el span nos permite aislar esta parte del texto para pintarla de morado en el CSS -->
+                <span class="texto-morado">WEB MODERNO</span>
             </h1>
             <p class="subtitulo-bienvenida">
                 Guía interactiva estructurada bajo estándares profesionales, utilizando etiquetas semánticas y diseño adaptable.
             </p>
             <a href="html.html" class="boton-principal">
-                Comenzar Exploración <i class="fa-solid fa-arrow-right"></i>
+                Comenzar Exploración 
+                <!-- fa-arrow-right dibuja la flechita que apunta hacia la derecha dentro del boton -->
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
         </section>
 
-        <!-- tarjetas interactivas -->
+        <!-- contenedor que agrupa las 3 tarjetas informativas de la pagina de inicio -->
         <div class="contenedor-tarjetas">
             
+            <!-- data-aos="fade-right" hace que esta tarjeta entre deslizandose desde la derecha -->
             <div class="tarjeta-uno" data-aos="fade-right" data-aos-duration="1200">
                 <div class="icono-tarjeta">
+                    <!-- fa-html5 busca y dibuja el logotipo oficial de HTML en la tarjeta -->
                     <i class="fa-brands fa-html5"></i>
                 </div>
                 <h3 class="titulo-tarjeta">Estructura HTML5</h3>
@@ -55,18 +69,24 @@
                 </p>
             </div>
 
+            <!-- data-aos="fade-up" hace que esta tarjeta aparezca subiendo desde abajo -->
             <div class="tarjeta-dos" data-aos="fade-up" data-aos-duration="1200">
                 <div class="icono-tarjeta">
+                    <!-- fa-css3-alt dibuja el logotipo oficial de CSS -->
                     <i class="fa-brands fa-css3-alt"></i>
                 </div>
                 <h3 class="titulo-tarjeta">Estilos CSS3</h3>
                 <p class="texto-tarjeta">
-                    Descubre el funcionamiento de rejillas dinámicas, utilidades <strong>Flexbox</strong> y paletas de colores armónicas para interfaces profesionales.
+                    Descubre el funcionamiento de rejillas dinámicas, utilidades 
+                    <!-- strong sirve para aplicar negritas con mayor grosor visual -->
+                    <strong>Flexbox</strong> y paletas de colores armónicas para interfaces profesionales.
                 </p>
             </div>
 
+            <!-- data-aos="fade-left" hace que esta tarjeta entre deslizandose desde la izquierda -->
             <div class="tarjeta-tres" data-aos="fade-left" data-aos-duration="1200">
                 <div class="icono-tarjeta">
+                    <!-- fa-js dibuja el logotipo oficial de JavaScript -->
                     <i class="fa-brands fa-js"></i>
                 </div>
                 <h3 class="titulo-tarjeta">Lógica JavaScript</h3>
@@ -79,12 +99,16 @@
 
     </main>
 
+    <!-- etiqueta semantica para definir el pie de pagina -->
     <footer class="pie-pagina">
+        <!-- &copy; es la entidad que dibuja el simbolo de derechos de autor © en la pantalla -->
         <p>&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
     </footer>
 
+    <!-- archivo JavaScript de la libreria AOS para activar las animaciones de scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // esta funcion enciende y ejecuta las animaciones de la libreria AOS
         AOS.init();
     </script>
 </body>

@@ -1,56 +1,65 @@
 body {
-    background-color: #0f0e17;
-    color: #f8f9fa;
-    font-family: 'Inter', sans-serif;
+    background-color: #0f0e17; /* color de fondo oscuro estilo gamer */
+    color: #f8f9fa; /* color principal del texto (blanco suave) */
+    font-family: 'Inter', sans-serif; /* tipografia base para todo el texto */
     margin: 0;
     padding: 0;
 }
+/* contenedor de la barra de navegacion superior */
 .div-encabezado {
-    background-color: #161524;
-    border-bottom: 1px solid #2d2b42;
+    background-color: #161524; /* tono oscuro ligeramente mas claro que el fondo */
+    border-bottom: 1px solid #2d2b42; /* linea divisoria sutil inferior */
     padding: 15px 0;
 }
+/* distribucion interna del menu usando Flexbox para alinear elementos a los lados */
 .div-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* manda el logo a la izquierda y los enlaces a la derecha */
+    align-items: center; /* centra los elementos verticalmente */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     flex-wrap: wrap;
 }
+/* estilos para el logotipo principal del sitio */
 .logo-pagina {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #9d4edd;
-    text-decoration: none;
+    color: #9d4edd; /* color morado caracteristico */
+    text-decoration: none; /* quita el subrayado predeterminado del enlace */
 }
+/* lista desordenada que contiene los enlaces del menu */
 .lista-menu {
     display: flex;
-    list-style: none;
-    gap: 20px;
+    list-style: none; /* elimina los puntos o viñetas de la lista */
+    gap: 20px; /* separa horizontalmente cada opcion del menu */
     margin: 0;
     padding: 0;
 }
+/* estilos para los enlaces individuales del menu de navegacion */
 .enlace-menu {
-    color: #a0a0b0;
+    color: #a0a0b0; /* tono gris suave para las opciones inactivas */
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* transicion suave al cambiar de color */
 }
+/* efecto al pasar el cursor (hover) o cuando la pagina esta activa */
 .enlace-menu:hover, .enlace-menu.activo {
-    color: #9d4edd;
+    color: #9d4edd; /* cambia al color morado al seleccionarlo o pasar el mouse */
 }
+/* contenedor principal que centra y limita el ancho del contenido de las paginas */
 .clase-principal {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+/* seccion de bienvenida o portada de cada modulo */
 .seccion-bienvenida {
     text-align: center;
     padding: 60px 20px 40px 20px;
 }
+/* titulo principal grande de las portadas */
 .titulo-principal {
     font-family: 'Poppins', sans-serif;
     font-size: 2.8rem;
@@ -58,9 +67,11 @@ body {
     color: #ffffff;
     margin-bottom: 15px;
 }
+/* clase auxiliar para pintar palabras clave en color morado */
 .texto-morado {
     color: #9d4edd;
 }
+/* subtitulo descriptivo debajo de los titulos principales */
 .subtitulo-bienvenida {
     font-size: 1.15rem;
     color: #a0a0b0;
@@ -68,48 +79,54 @@ body {
     margin: 0 auto 30px auto;
     line-height: 1.6;
 }
+/* boton principal de llamada a la accion (CTA) */
 .boton-principal {
     display: inline-block;
-    background-color: #7928ca;
+    background-color: #7928ca; /* color morado vibrante del boton */
     color: #ffffff;
     text-decoration: none;
     padding: 14px 28px;
-    border-radius: 8px;
+    border-radius: 8px; /* redondea las esquinas del boton */
     font-weight: 600;
     font-size: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
+/* efecto interactivo al pasar el cursor sobre el boton principal */
 .boton-principal:hover {
     background-color: #9d4edd;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(121, 40, 202, 0.5);
+    transform: translateY(-3px); /* eleva ligeramente el boton */
+    box-shadow: 0 8px 25px rgba(121, 40, 202, 0.5); /* genera una sombra brillante de luz morada */
 }
+/* contenedor en cuadricula (CSS Grid) para organizar las 3 tarjetas de inicio */
 .contenedor-tarjetas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* se acomodan solas segun el ancho de pantalla */
     gap: 25px;
     margin-top: 40px;
     margin-bottom: 60px;
 }
-/* Interacción de elevación para las tarjetas informativas */
+/* estilos estéticos base para las tarjetas informativas */
 .tarjeta-uno, .tarjeta-dos, .tarjeta-tres {
-    background-color: #1a1829;
-    border: 1px solid #2d2b42;
+    background-color: #1a1829; /* fondo oscuro morado para la tarjeta */
+    border: 1px solid #2d2b42; /* borde sutil */
     border-radius: 12px;
     padding: 30px 20px;
     text-align: center;
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
+/* efecto de elevacion (hover) al pasar el mouse por encima de las tarjetas */
 .tarjeta-uno:hover, .tarjeta-dos:hover, .tarjeta-tres:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(157, 78, 221, 0.3);
-    border-color: #9d4edd;
+    transform: translateY(-8px) scale(1.02); /* sube la tarjeta y la agranda un 2% */
+    box-shadow: 0 15px 35px rgba(157, 78, 221, 0.3); /* sombra morada proyectada */
+    border-color: #9d4edd; /* enciende el borde de color morado */
 }
+/* contenedor de los iconos grandes dentro de las tarjetas */
 .icono-tarjeta {
     font-size: 2.8rem;
     color: #9d4edd;
     margin-bottom: 15px;
 }
+/* titulo interno de cada tarjeta */
 .titulo-tarjeta {
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
@@ -117,18 +134,21 @@ body {
     margin-bottom: 15px;
     color: #ffffff;
 }
+/* texto descriptivo dentro de las tarjetas */
 .texto-tarjeta {
     color: #a0a0b0;
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;
 }
+/* etiqueta para resaltar palabras clave dentro de los textos */
 .texto-resaltado {
     background-color: rgba(157, 78, 221, 0.2);
     color: #d8b4fe;
     padding: 2px 6px;
     border-radius: 4px;
 }
+/* estilos para el pie de pagina inferior */
 .pie-pagina {
     text-align: center;
     padding: 25px 20px;
@@ -136,23 +156,24 @@ body {
     color: #808095;
     font-size: 0.9rem;
 }
+/* regla responsiva (Media Query) para celulares con pantallas menores a 768px */
 @media (max-width: 768px) {
     .div-menu {
-        flex-direction: column;
+        flex-direction: column; /* apila el logo y los enlaces verticalmente en celular */
         gap: 15px;
     }
     .titulo-principal {
-        font-size: 2rem;
+        font-size: 2rem; /* reduce el tamaño del titulo principal para que quepa bien en celulares */
     }
 }
+/* ==== ESTILOS ESPECÍFICOS PARA BIBLIOTECAS (HTML, CSS, JS) ===== */
 
-/* ==== HTML ===== */
-
-.contenedor-extra-innecesario {
+/* contenedor general renombrado para mantener el flujo estético */
+.contenedor-secciones {
     display: block;
     width: 100%;
-    /* width: 95%; lo regrese a 100 porque se veia chueco */
 }
+/* cajas principales donde se muestra la teórica y los fragmentos de código */
 .caja-contenido {
     background-color: #1a1829;
     border: 1px solid #2d2b42;
@@ -160,53 +181,59 @@ body {
     padding: 30px;
     margin-bottom: 30px;
 }
+/* subtítulos que dividen las secciones internas de las bibliotecas */
 .subtitulo-seccion {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     color: #9d4edd;
     margin-bottom: 20px;
-    border-bottom: 2px solid #2d2b42;
+    border-bottom: 2px solid #2d2b42; /* línea decorativa inferior */
     padding-bottom: 10px;
 }
+/* formato de lectura estándar para los párrafos explicativos */
 .texto-normal {
     color: #a0a0b0;
     font-size: 1.05rem;
     line-height: 1.7;
     margin-bottom: 20px;
 }
-/* Estilo para los fragmentos de código */
+/* caja negra contenedora de los ejemplos de código fuente */
 .bloque-codigo {
-    background-color: #000000;
-    border-left: 4px solid #7928ca;
+    background-color: #000000; /* fondo negro profundo estilo editor de código */
+    border-left: 4px solid #7928ca; /* franja morada decorativa al costado izquierdo */
     padding: 20px;
     border-radius: 6px;
-    font-family: monospace;
+    font-family: monospace; /* tipografía de código de máquina */
     color: #d8b4fe;
-    overflow-x: auto;
+    overflow-x: auto; /* genera barra de desplazamiento horizontal si el código es largo en móviles */
 }
+/* color específico para resaltar las etiquetas dentro de los bloques de código */
 .etiqueta {
     color: #ff7b72;
 }
+/* formato para las listas de viñetas informativas */
 .lista-ejemplos {
     color: #a0a0b0;
     line-height: 1.8;
     margin-left: 20px;
 }
+/* resaltado en negritas dentro de las listas de ejemplos */
 .lista-ejemplos strong {
     color: #ffffff;
     background-color: rgba(157, 78, 221, 0.15);
     padding: 2px 5px;
     border-radius: 4px;
 }
+/* caja especial para destacar consejos o decálogos de supervivencia */
 .caja-tip {
     background-color: rgba(157, 78, 221, 0.1);
-    border: 1px solid violet;
-    border: 2px solid #9d4edd;
+    border: 2px solid #9d4edd; /* borde morado sólido para llamar la atención */
     border-radius: 8px;
     padding: 25px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
+/* título dentro de las cajas de consejos */
 .titulo-tip {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -214,18 +241,21 @@ body {
     margin-bottom: 15px;
     font-size: 1.4rem;
 }
+/* rejilla para organizar el repertorio de etiquetas y propiedades en columnas */
 .rejilla-etiquetas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
     margin-top: 15px;
 }
+/* sub-tarjetas individuales para cada categoría del repertorio */
 .categoria-etiquetas {
     background-color: rgba(26, 24, 41, 0.6);
     border-left: 3px solid #7928ca;
     padding: 15px;
     border-radius: 6px;
 }
+/* encabezados de cada categoría del repertorio */
 .categoria-etiquetas h4 {
     color: #d8b4fe;
     margin-top: 0;
@@ -233,21 +263,22 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
 }
-/*CSS */
-.demostracion-flex{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;background-color:#0f0e17;
-    padding:25px;
-    border-radius:8px;
-    border:1px dashed #7928ca;
-    margin-top:20px;
+/* clases secundarias para demostraciones visuales de Flexbox */
+.demostracion-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0f0e17;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px dashed #7928ca; /* borde punteado para simular zona de pruebas */
+    margin-top: 20px;
 }
-.caja-hija{
-    background-color:#7928ca;
-    color:#ffffff;
-    padding:15px 25px;
-    border-radius:6px;
-    font-weight:600;
-    font-family:'Poppins',sans-serif;
+.caja-hija {
+    background-color: #7928ca;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
