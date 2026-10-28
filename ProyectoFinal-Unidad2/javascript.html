@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DevWeb Hub - Biblioteca JavaScript</title>
+    
+    <!-- Fuentes, Bootstrap, AOS y FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="./style1.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="div-encabezado">
+        <nav class="div-menu">
+            <a href="index.html" class="logo-pagina">
+                <i class="fa-solid fa-code"></i> DevWeb Hub
+            </a>
+            <ul class="lista-menu">
+                <li><a href="index.html" class="enlace-menu">Inicio</a></li>
+                <li><a href="html.html" class="enlace-menu">HTML</a></li>
+                <li><a href="css.html" class="enlace-menu">CSS</a></li>
+                <li><a href="javascript.html" class="enlace-menu activo">JavaScript</a></li>
+                <li><a href="contacto.html" class="enlace-menu">Opinión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="clase-principal">
+        
+        <section class="seccion-bienvenida" data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="titulo-principal">
+                Interactividad con <span class="texto-morado">JavaScript</span>
+            </h1>
+            <p class="subtitulo-bienvenida">
+                Biblioteca técnica de referencia: lógica de programación, manipulación del DOM, escucha de eventos y validación del lado del cliente.
+            </p>
+        </section>
+
+        <div class="contenedor-extra-innecesario">
+            
+            <article class="caja-contenido" data-aos="fade-up">
+                <h2 class="subtitulo-seccion"><i class="fa-solid fa-terminal"></i> 1. Sintaxis Básica y Funciones</h2>
+                <p class="texto-normal">
+                    JavaScript es el cerebro de la página. Nos permite guardar información temporal y crear "recetas" (funciones) que ejecutan acciones específicas cuando se las llamamos.
+                </p>
+                
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Variables (El almacenamiento)</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">// 'const' es para valores que NO van a cambiar nunca</span><br>
+<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">rolUsuario</span> = <span style="color: #a5d6ff;">"Estudiante"</span>;<br><br>
+<span style="color: #8b949e;">// 'let' es para valores que SÍ van a cambiar en el futuro</span><br>
+<span style="color: #ff7b72;">let</span> <span style="color: #79c0ff;">calificacion</span> = <span style="color: #a5d6ff;">85</span>;<br>
+calificacion = <span style="color: #a5d6ff;">100</span>; <span style="color: #8b949e;">// Actualizando el valor</span>
+                    </code>
+                </div>
+
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Funciones (Las acciones)</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">// Creamos la función (no se ejecuta sola, solo se guarda)</span><br>
+<span style="color: #ff7b72;">function</span> <span style="color: #d2a8ff;">mostrarMensaje</span>() {<br>
+&nbsp;&nbsp;<span style="color: #79c0ff;">console</span>.<span style="color: #d2a8ff;">log</span>(<span style="color: #a5d6ff;">"Este mensaje se muestra en la consola oculta (F12)"</span>);<br>
+}<br><br>
+<span style="color: #8b949e;">// Así es como llamamos a la función para que trabaje</span><br>
+<span style="color: #d2a8ff;">mostrarMensaje</span>();
+                    </code>
+                </div>
+            </article>
+
+            <!-- SECCIÓN 2: EL DOM (DOCUMENT OBJECT MODEL) -->
+            <article class="caja-contenido" data-aos="fade-up">
+                <h2 class="subtitulo-seccion"><i class="fa-solid fa-sitemap"></i> 2. Manipulación del DOM (Conectar HTML y JS)</h2>
+                <p class="texto-normal">
+                    El <strong>DOM</strong> es la forma en que JavaScript ve a tu HTML: como un árbol de elementos. Para modificar un título o una caja, primero debemos "seleccionarla".
+                </p>
+                
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">A. Seleccionar Elementos (querySelector)</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">// Buscamos el primer elemento que tenga la clase "caja-contenido"</span><br>
+<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">miCaja</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelector</span>(<span style="color: #a5d6ff;">'.caja-contenido'</span>);<br><br>
+<span style="color: #8b949e;">// Buscamos TODOS los elementos que sean párrafos &lt;p&gt;</span><br>
+<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">todosLosParrafos</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelectorAll</span>(<span style="color: #a5d6ff;">'p'</span>);
+                    </code>
+                </div>
+
+                <h3 style="color: #ffffff; font-family: 'Poppins', sans-serif; margin-top: 25px;">B. Modificar Clases y Textos</h3>
+                <div class="bloque-codigo">
+                    <code>
+<span style="color: #8b949e;">// Cambiar el texto que está dentro del HTML</span><br>
+miCaja.<span style="color: #79c0ff;">textContent</span> = <span style="color: #a5d6ff;">"¡He hackeado este texto con JavaScript!"</span>;<br><br>
+<span style="color: #8b949e;">// Agregar o quitar clases de CSS en vivo (classList)</span><br>
+miCaja.<span style="color: #79c0ff;">classList</span>.<span style="color: #d2a8ff;">add</span>(<span style="color: #a5d6ff;">'ocultar-elemento'</span>); <span style="color: #8b949e;">// Le pone la clase</span><br>
+miCaja.<span style="color: #79c0ff;">classList</span>.<span style="color: #d2a8ff;">remove</span>(<span style="color: #a5d6ff;">'ocultar-elemento'</span>); <span style="color: #8b949e;">// Le quita la clase</span>
+                    </code>
+                </div>
+            </article>
+
+            <!-- SECCIÓN 3: EVENTOS (INTERACTIVIDAD) -->
+            <article class="caja-contenido" data-aos="fade-up">
+                <h2 class="subtitulo-seccion"><i class="fa-solid fa-bolt"></i> 3. Event Listeners (Escuchadores de Eventos)</h2>
+                <p class="texto-normal">
+                    Los eventos son acciones del usuario (hacer clic, teclear, mover el mouse). Usamos <code>addEventListener</code> para decirle a JavaScript: "Quédate vigilando este botón y, si le hacen clic, ejecuta esto".
+                </p>
+                
+                <div class="bloque-codigo" style="margin-bottom: 25px;">
+                    <code>
+<span style="color: #ff7b72;">const</span> <span style="color: #79c0ff;">botonAccion</span> = <span style="color: #79c0ff;">document</span>.<span style="color: #d2a8ff;">querySelector</span>(<span style="color: #a5d6ff;">'#btn-interactivo'</span>);<br><br>
+<span style="color: #8b949e;">// Vigilamos el evento 'click'</span><br>
+botonAccion.<span style="color: #d2a8ff;">addEventListener</span>(<span style="color: #a5d6ff;">'click'</span>, <span style="color: #ff7b72;">function</span>() {<br>
+&nbsp;&nbsp;<span style="color: #d2a8ff;">alert</span>(<span style="color: #a5d6ff;">'¡El Event Listener capturó tu clic perfectamente!'</span>);<br>
+});
+                    </code>
+                </div>
+
+                <!-- Botón Interactivo Real -->
+                <div style="text-align: center; padding: 30px; border: 2px dashed #9d4edd; border-radius: 8px; background-color: rgba(157, 78, 221, 0.05);">
+                    <p class="texto-normal" style="margin-bottom: 15px; color: #ffffff;">Prueba el código interactuando con este botón real:</p>
+                    <button id="btn-interactivo" class="boton-principal" style="cursor: pointer; font-size: 1.1rem;">
+                        <i class="fa-solid fa-hand-pointer"></i> Haz Clic Aquí
+                    </button>
+                </div>
+            </article>
+
+            <!-- SECCIÓN 4: REPERTORIO DE MÉTODOS (CON BOOTSTRAP) -->
+            <article class="caja-contenido" data-aos="fade-up">
+                <h2 class="subtitulo-seccion"><i class="fa-solid fa-book-journal-whills"></i> 4. Glosario de Métodos Fundamentales</h2>
+                <p class="texto-normal">
+                    Recopilación de los comandos y propiedades más requeridos en el desarrollo de interfaces dinámicas y validación de formularios.
+                </p>
+                
+                <!-- Uso de Bootstrap Grid para cumplir rúbrica -->
+                <div class="row g-4 mt-2">
+                    
+                    <div class="col-12 col-md-6">
+                        <div class="p-3" style="background-color: rgba(26, 24, 41, 0.6); border-left: 3px solid #7928ca; border-radius: 6px; height: 100%;">
+                            <h4 style="color: #d8b4fe; font-family: 'Poppins', sans-serif; font-size: 1.1rem;">Interacción con el DOM</h4>
+                            <ul class="lista-ejemplos">
+                                <li><strong>document.querySelector('selector'):</strong> Selecciona el primer elemento que coincida.</li>
+                                <li><strong>document.querySelectorAll('selector'):</strong> Crea una lista con todos los elementos coincidentes.</li>
+                                <li><strong>.innerHTML:</strong> Permite insertar texto y etiquetas HTML completas.</li>
+                                <li><strong>.textContent:</strong> Inserta texto plano (más seguro contra hackeos).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <div class="p-3" style="background-color: rgba(26, 24, 41, 0.6); border-left: 3px solid #7928ca; border-radius: 6px; height: 100%;">
+                            <h4 style="color: #d8b4fe; font-family: 'Poppins', sans-serif; font-size: 1.1rem;">Lógica de Formularios</h4>
+                            <ul class="lista-ejemplos">
+                                <li><strong>.value:</strong> Captura lo que el usuario escribió en un input de texto.</li>
+                                <li><strong>e.preventDefault():</strong> ¡Súper importante! Evita que la página se recargue cuando le das al botón de "Enviar" en un formulario.</li>
+                                <li><strong>if / else:</strong> Permite evaluar condiciones (ej. "Si el input está vacío, muestra error").</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECCIÓN 5: DECÁLOGO DE SUPERVIVENCIA -->
+            <article class="caja-tip" data-aos="fade-left">
+                <h3 class="titulo-tip"><i class="fa-solid fa-triangle-exclamation"></i> Decálogo de Supervivencia en JavaScript</h3>
+                <p class="texto-normal" style="margin-bottom: 10px;">Evita que tu código "truene" siguiendo estas 10 directrices operativas:</p>
+                
+                <ol class="lista-ejemplos" style="color: #d8b4fe;">
+                    <li><strong style="background-color: transparent; padding: 0;">La Consola es tu mejor amiga:</strong> Si algo no funciona, presiona F12 y revisa la pestaña "Console". Ahí te dirá exactamente en qué línea te equivocaste.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Usa console.log() para todo:</strong> Antes de modificar el HTML, usa <code>console.log(variable)</code> para asegurarte de que JS sí está guardando la información correcta.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Diferencia entre let y const:</strong> Acostúmbrate a usar siempre <code>const</code> a menos que sepas con absoluta certeza que ese valor va a cambiar en el futuro.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Cuidado con las mayúsculas (CamelCase):</strong> JS es estricto. <code>miBoton</code> no es lo mismo que <code>miboton</code>. Siempre escribe la primera letra en minúscula y las siguientes palabras con mayúscula inicial.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">El script va al final:</strong> Siempre coloca tu etiqueta <code>&lt;script&gt;</code> justo antes de cerrar el <code>&lt;/body&gt;</code>. Si lo pones arriba, JS intentará modificar el HTML antes de que cargue y marcará error.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Un error detiene todo:</strong> Si tienes un error de sintaxis en la línea 10, todo el código de la línea 11 en adelante jamás se ejecutará. Revisa línea por línea.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Los IDs deben ser únicos:</strong> Si usas <code>querySelector('#miboton')</code> y tienes dos botones con ese ID en tu HTML, JS solo le hará caso al primero y el segundo quedará inútil.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Ojo con las comillas:</strong> Puedes usar comillas simples <code>'texto'</code> o dobles <code>"texto"</code>, pero nunca las mezcles en la misma frase.</li>
+                    <li><strong style="background-color: transparent; padding: 0;">Verifica que el elemento exista:</strong> Si intentas hacerle <code>addEventListener</code> a un botón que escribiste mal en el selector, la consola te arrojará el famoso error "Cannot read properties of null".</li>
+                    <li><strong style="background-color: transparent; padding: 0;">preventDefault es obligatorio:</strong> En los formularios, si no usas <code>e.preventDefault()</code>, la página hará un "parpadeo" y perderás toda la información validada.</li>
+                </ol>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
+    </footer>
+
+    <!-- LIBRERÍAS EXTERNAS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- SCRIPT LOCAL: Interacción de la página -->
+    <script>
+        // Inicializar animaciones de bajada (AOS)
+        AOS.init();
+
+        // Lógica de demostración para el Botón Interactivo
+        const botonPrueba = document.querySelector('#btn-interactivo');
+        
+        botonPrueba.addEventListener('click', function() {
+            // Este es un alert nativo sencillo
+            alert('¡Excelente trabajo! Has ejecutado exitosamente un evento en JavaScript mediante addEventListener.');
+            
+            // Un pequeño truco extra: le cambiamos el color al botón para probar manipulación del DOM
+            botonPrueba.style.backgroundColor = "#2ea043"; 
+            botonPrueba.innerHTML = '<i class="fa-solid fa-check"></i> Evento Capturado';
+        });
+    </script>
+</body>
+</html>
