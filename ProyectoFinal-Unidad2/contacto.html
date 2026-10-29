@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DevWeb Hub - Opinión y Contacto</title>
     
-    <!-- enlaces a tipografías, librerías de iconos y estilos principales -->
+    <!-- aqui conectamos Google Fonts, el framework de Bootstrap, las animaciones AOS y los iconos -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,10 +14,11 @@
 </head>
 <body>
 
-    <!-- barra de navegación compartida con las demás páginas -->
     <header class="div-encabezado">
+        <!-- aqui dentro va el menu de enlaces para que te puedas mover libremente por el sitio -->
         <nav class="div-menu">
             <a href="index.html" class="logo-pagina">
+                <!-- aqui mandamos a llamar el icono del codigo de la libreria de fontawesome -->
                 <i class="fa-solid fa-code"></i> DevWeb Hub
             </a>
             <ul class="lista-menu">
@@ -32,7 +33,7 @@
 
     <main class="clase-principal">
         
-        <!-- sección de bienvenida con animación AOS bajando suavemente -->
+        <!-- aqui mandamos a llamar la animacion AOS para que este contenedor baje suavemente al cargar -->
         <section class="seccion-bienvenida" data-aos="fade-down" data-aos-duration="1000">
             <h1 class="titulo-principal">
                 Buzón de <span class="texto-morado">Opinión</span>
@@ -42,7 +43,7 @@
             </p>
         </section>
 
-        <!-- contenedor principal del formulario con animación de subida -->
+        <!-- aqui usamos nuestro contenedor general para guardar la caja del formulario -->
         <div class="contenedor-secciones" data-aos="fade-up">
             <article class="caja-contenido">
                 <h2 class="subtitulo-seccion"><i class="fa-solid fa-comments"></i> Formulario de Experiencia de Usuario</h2>
@@ -50,22 +51,29 @@
                     Por favor, completa los siguientes campos para registrar tu evaluación sobre el contenido y diseño de la plataforma.
                 </p>
 
-                <!-- formulario HTML con un ID específico para que el script externo lo controle -->
+                <!-- aqui abrimos la etiqueta form para crear el formulario interactivo y le ponemos un ID para que el JavaScript externo lo pueda controlar -->
                 <form id="form-opinion" class="mt-4">
                     
+                    <!-- la clase mb-3 es de Bootstrap y sirve puramente para darle un espacecito hacia abajo al campo -->
                     <div class="mb-3">
+                        <!-- el label sirve para ponerle el texto descriptivo al ladito o arriba de la cajita del input -->
                         <label for="nombre" class="form-label text-white fw-semibold">Nombre Completo:</label>
+                        <!-- el input es la cajita donde escribes. El type="text" es para texto normal, 
+                             el required obliga a que no lo dejes vacio, y el id es para que JS lo atrape -->
                         <input type="text" class="form-control bg-dark text-white border-secondary" id="nombre" placeholder="Ej. Darinka Hernández" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="correo" class="form-label text-white fw-semibold">Correo Electrónico:</label>
+                        <!-- aqui el type="email" revisa solito que escribas una arroba y un correo real -->
                         <input type="email" class="form-control bg-dark text-white border-secondary" id="correo" placeholder="correo@ejemplo.com" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="modulo" class="form-label text-white fw-semibold">Módulo de Mayor Utilidad:</label>
+                        <!-- el select crea una lista desplegable para que elijas una opcion -->
                         <select class="form-select bg-dark text-white border-secondary" id="modulo">
+                            <!-- el option son las opciones que se despliegan para seleccionar -->
                             <option value="html">Estructura HTML5</option>
                             <option value="css">Estilos CSS3</option>
                             <option value="js">Lógica JavaScript</option>
@@ -74,15 +82,16 @@
 
                     <div class="mb-3">
                         <label for="comentarios" class="form-label text-white fw-semibold">Comentarios o Sugerencias:</label>
+                        <!-- el textarea es una caja de texto grandota de varias lineas para poder escribir chido -->
                         <textarea class="form-control bg-dark text-white border-secondary" id="comentarios" rows="4" placeholder="Escribe aquí tu opinión..." required></textarea>
                     </div>
 
-                    <!-- alerta de éxito invisible por defecto gracias a la clase d-none de Bootstrap -->
+                    <!-- esta alerta esta oculta gracias al d-none de Bootstrap solo aparece cuando mandas el formulario con ayuda de JavaScript -->
                     <div id="alerta-exito" class="alert alert-success d-none mt-3" role="alert">
                         <i class="fa-solid fa-circle-check"></i> ¡Muchas gracias! Tu opinión ha sido registrada correctamente.
                     </div>
 
-                    <!-- botón de envío con la clase principal heredada del CSS -->
+                    <!-- el type="submit" convierte a este boton en el encargado de enviar el formulario -->
                     <button type="submit" class="boton-principal w-100 mt-3" style="border: none; cursor: pointer;">
                         <i class="fa-solid fa-paper-plane"></i> Enviar Opinión
                     </button>
@@ -92,18 +101,18 @@
 
     </main>
 
-    <!-- pie de página oficial -->
+    <!-- aqui mandamos a llamar el footer para hacer el pie de pagina -->
     <footer class="pie-pagina">
+        <!-- aqui el &copy; sirve para renderizar el simbolo de derechos de autor (la C en el circulo) -->
         <p>&copy; 2026 DevWeb Hub. Proyecto académico optimizado para dispositivos móviles y escritorio.</p>
     </footer>
 
-    <!-- scripts necesarios: librería AOS para animaciones -->
+    <!-- scripts para las animaciones y el funcionamiento -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-    
-    <!-- archivo JavaScript externo e independiente para la lógica del formulario -->
+ 
     <script src="./script.js"></script>
 </body>
 </html>
