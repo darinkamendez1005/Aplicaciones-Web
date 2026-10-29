@@ -1,9 +1,22 @@
+/* aqui evitamos que los paddings o bordes hagan mas grandes a las cajas y rompan la pagina */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* aqui obligamos a que ninguna imagen o video sea mas ancho que la pantalla del celular */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
 body {
-    background-color: #0f0e17; /* color de fondo oscuro estilo gamer */
-    color: #f8f9fa; /* color principal del texto (blanco suave) */
-    font-family: 'Inter', sans-serif; /* tipografia base para todo el texto */
+    background-color: #0f0e17;
+    color: #f8f9fa;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    /* aqui aseguramos el ancho y cortamos de tajo cualquier cosa que intente desbordarse hacia los lados */
+    width: 100%;
+    overflow-x: hidden;
 }
 /* contenedor de la barra de navegacion superior */
 .div-encabezado {
@@ -180,6 +193,8 @@ body {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
+    /* aqui le ponemos un limite a la caja para que jamas crezca mas del 100% del espacio que tiene */
+    max-width: 100%;
 }
 /* subtítulos que dividen las secciones internas de las bibliotecas */
 .subtitulo-seccion {
