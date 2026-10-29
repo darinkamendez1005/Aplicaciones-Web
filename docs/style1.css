@@ -2,20 +2,21 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
 /* aqui obligamos a que ninguna imagen o video sea mas ancho que la pantalla del celular */
 img, video {
     max-width: 100%;
     height: auto;
 }
-body {
+/* aqui agregamos 'html' junto al body para obligar al celular a obedecer la regla de no desbordarse */
+html, body {
     background-color: #0f0e17;
     color: #f8f9fa;
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    /* aqui aseguramos el ancho y cortamos de tajo cualquier cosa que intente desbordarse hacia los lados */
+    /* aqui aseguramos el ancho y cortamos de tajo cualquier cosa que intente salir de la pantalla */
     width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
 }
 /* contenedor de la barra de navegacion superior */
@@ -45,10 +46,14 @@ body {
 /* lista desordenada que contiene los enlaces del menu */
 .lista-menu {
     display: flex;
-    list-style: none; /* elimina los puntos o viñetas de la lista */
-    gap: 20px; /* separa horizontalmente cada opcion del menu */
+    list-style: none;
+    gap: 20px;
     margin: 0;
     padding: 0;
+    /* aqui le decimos que si los enlaces ya no caben a lo ancho, se bajen al siguiente renglon solitos en vez de romper la pagina */
+    flex-wrap: wrap; 
+    /* aqui los centramos para que se vean bonitos si se bajan de renglon */
+    justify-content: center;
 }
 /* estilos para los enlaces individuales del menu de navegacion */
 .enlace-menu {
@@ -172,14 +177,18 @@ body {
 /* regla responsiva (Media Query) para celulares con pantallas menores a 768px */
 @media (max-width: 768px) {
     .div-menu {
-        flex-direction: column; /* apila el logo y los enlaces verticalmente en celular */
+        flex-direction: column;
         gap: 15px;
     }
+    /* aqui hacemos que en celular los enlaces esten un poco mas juntitos para que quepan mejor */
+    .lista-menu {
+        gap: 10px;
+    }
     .titulo-principal {
-        font-size: 2rem; /* reduce el tamaño del titulo principal para que quepa bien en celulares */
+        font-size: 2rem;
     }
 }
-/* ==== ESTILOS ESPECÍFICOS PARA BIBLIOTECAS (HTML, CSS, JS) ===== */
+/* HTML, CSS y JS*/
 
 /* contenedor general renombrado para mantener el flujo estético */
 .contenedor-secciones {
